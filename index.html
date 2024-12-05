@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon">
+
+   <!-- Font Awesome CDN v-6.7.1 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="src/css/input.css">
+   <title>EngixStudio</title>
 </head>
+
 <body>
-   
+   <!-- First Header -->
+   <header>
+      <div class="navbar bg-base-100">
+         <div class="navbar-start">
+            <a class="btn btn-ghost text-xl">
+               <img class="w-48" src="src/images/Logo(Border).png" alt="">
+            </a>
+         </div>
+
+         <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+               <li><a href="">About</a></li>
+               <li><a href="">Portfolio</a></li>
+               <li><a href="">Blog</a></li>
+               <li><a href="">Contact</a></li>
+            </ul>
+         </div>
+
+         <div class="navbar-end">
+            <!-- Hamburger Icon -->
+            <button class="btn btn-ghost lg:hidden openSidebar">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+         </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div
+         class="sidebar fixed top-0 right-0 z-50 h-full w-1/2 translate-x-full bg-black/30 shadow-lg transition-transform duration-300 lg:hidden">
+         <div class="flex justify-end p-4">
+            <button class="btn btn-ghost closeSidebar">
+               <i class="fa-solid fa-xmark"></i>
+            </button>
+         </div>
+         <ul class="menu p-4">
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+         </ul>
+      </div>
+   </header>
+
+   <!-- Second Header (Duplicate of the first one) -->
+   <header>
+      <div class="navbar bg-base-100">
+         <div class="navbar-start">
+            <a class="btn btn-ghost text-xl">
+               <img class="w-48" src="src/images/Logo(Border).png" alt="">
+            </a>
+         </div>
+
+         <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+               <li><a href="">About</a></li>
+               <li><a href="">Portfolio</a></li>
+               <li><a href="">Blog</a></li>
+               <li><a href="">Contact</a></li>
+            </ul>
+         </div>
+
+         <div class="navbar-end">
+            <!-- Hamburger Icon -->
+            <button class="btn btn-ghost lg:hidden openSidebar">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+         </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div
+         class="sidebar fixed top-0 right-0 z-50 h-full w-1/2 translate-x-full bg-black/30 shadow-lg transition-transform duration-300 lg:hidden">
+         <div class="flex justify-end p-4">
+            <button class="btn btn-ghost closeSidebar">
+               <i class="fa-solid fa-xmark"></i>
+            </button>
+         </div>
+         <ul class="menu p-4">
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+         </ul>
+      </div>
+   </header>
+
+   <!-- Custom JS -->
+   <script src="src/js/main.js"></script>
 </body>
+
 </html>
