@@ -14,11 +14,54 @@
    <!-- Custom CSS -->
    <link rel="stylesheet" href="src/css/input.css">
    <title>EngixStudio</title>
+
+   <style>
+      /* Initially hide second navbar */
+      .navbar-hide {
+         transform: translateY(-100%);
+      }
+
+      .navbar-show {
+         transform: translateY(0);
+         transition: transform 0.3s ease-in-out;
+      }
+
+      .navbar {
+         position: fixed;
+         width: 100%;
+         top: 0;
+         left: 0;
+         right: 0;
+         z-index: 10;
+      }
+
+      /* Sidebar styles */
+      .sidebar {
+         position: fixed;
+         top: 0;
+         right: 0;
+         z-index: 50;
+         height: 100vh; /* Full screen height */
+         width: 50%; /* Half the screen width */
+         transform: translateX(100%); /* Initially hidden */
+         transition: transform 0.3s ease-in-out;
+         background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      }
+
+      .sidebar .menu {
+         padding: 20px;
+      }
+
+      .sidebar .closeSidebar {
+         font-size: 24px;
+         color: #fff;
+      }
+   </style>
 </head>
 
 <body>
    <!-- First Header -->
-   <header>
+   <header id="first-navbar" class="navbar navbar-show"> <!-- First navbar visible initially -->
       <div class="navbar bg-base-100">
          <div class="navbar-start">
             <a class="btn btn-ghost text-xl">
@@ -41,27 +84,11 @@
                <i class="fa-solid fa-bars"></i>
             </button>
          </div>
-      </div>
-
-      <!-- Sidebar -->
-      <div
-         class="sidebar fixed top-0 right-0 z-50 h-full w-1/2 translate-x-full bg-black/30 shadow-lg transition-transform duration-300 lg:hidden">
-         <div class="flex justify-end p-4">
-            <button class="btn btn-ghost closeSidebar">
-               <i class="fa-solid fa-xmark"></i>
-            </button>
-         </div>
-         <ul class="menu p-4">
-            <li><a href="">About</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
-         </ul>
       </div>
    </header>
 
    <!-- Second Header (Duplicate of the first one) -->
-   <header>
+   <header id="second-navbar" class="navbar navbar-hide"> <!-- Second navbar hidden initially -->
       <div class="navbar bg-base-100">
          <div class="navbar-start">
             <a class="btn btn-ghost text-xl">
@@ -85,26 +112,82 @@
             </button>
          </div>
       </div>
-
-      <!-- Sidebar -->
-      <div
-         class="sidebar fixed top-0 right-0 z-50 h-full w-1/2 translate-x-full bg-black/30 shadow-lg transition-transform duration-300 lg:hidden">
-         <div class="flex justify-end p-4">
-            <button class="btn btn-ghost closeSidebar">
-               <i class="fa-solid fa-xmark"></i>
-            </button>
-         </div>
-         <ul class="menu p-4">
-            <li><a href="">About</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
-         </ul>
-      </div>
    </header>
 
+   <!-- Sidebar -->
+   <div class="sidebar">
+      <div class="flex justify-end p-4">
+         <button class="btn btn-ghost closeSidebar">
+            <i class="fa-solid fa-xmark"></i>
+         </button>
+      </div>
+      <ul class="menu p-4">
+         <li><a href="">About</a></li>
+         <li><a href="">Portfolio</a></li>
+         <li><a href="">Blog</a></li>
+         <li><a href="">Contact</a></li>
+      </ul>
+   </div>
+
+   <main>
+      <div class="h-screen"></div>
+      <div class="h-screen"></div>
+      <div class="h-screen"></div>
+   </main>
+
    <!-- Custom JS -->
-   <script src="src/js/main.js"></script>
+   <script>
+      const openSidebar = document.querySelectorAll('.openSidebar');
+      const closeSidebar = document.querySelectorAll('.closeSidebar');
+      const sidebar = document.querySelector('.sidebar'); // Select the sidebar element globally
+
+      // Navbar functionality
+      const firstNavbar = document.getElementById('first-navbar');
+      const secondNavbar = document.getElementById('second-navbar');
+      let lastScrollPosition = 0;
+
+      // Sidebar open/close functionality
+      openSidebar.forEach(btn => {
+         btn.addEventListener('click', () => {
+            sidebar.style.transform = 'translateX(0)'; // Show the sidebar (move to visible position)
+            btn.classList.add('hidden'); // Hide the open button
+         });
+      });
+
+      closeSidebar.forEach(btn => {
+         btn.addEventListener('click', () => {
+            sidebar.style.transform = 'translateX(100%)'; // Hide the sidebar (move off-screen)
+            setTimeout(() => {
+               // Show the corresponding openSidebar button after the sidebar closes
+               openSidebar.forEach(openBtn => openBtn.classList.remove('hidden'));
+            }, 300); // Delay to wait for sidebar transition to finish
+         });
+      });
+
+      // Scroll event listener for navbar transitions
+      window.addEventListener('scroll', () => {
+         const scrollPosition = window.scrollY;
+
+         // Scrolling down
+         if (scrollPosition > 150 && scrollPosition > lastScrollPosition) {
+            firstNavbar.classList.remove('navbar-show');  // Hide the first navbar
+            firstNavbar.classList.add('navbar-hide');
+            secondNavbar.classList.remove('navbar-hide'); // Show the second navbar
+            secondNavbar.classList.add('navbar-show');
+         }
+         // Scrolling up
+         else if (scrollPosition < lastScrollPosition && scrollPosition <= 150) {
+            firstNavbar.classList.remove('navbar-hide');  // Show the first navbar
+            firstNavbar.classList.add('navbar-show');
+            secondNavbar.classList.remove('navbar-show');
+            secondNavbar.classList.add('navbar-hide');
+         }
+
+         // Update last scroll position
+         lastScrollPosition = scrollPosition;
+      });
+   </script>
+
 </body>
 
 </html>
