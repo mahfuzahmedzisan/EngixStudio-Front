@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .navbar-hide {
+    @apply -translate-y-full;
+  }
+  .navbar-show {
+    @apply translate-y-0 transition-all duration-300 ease-in-out;
+  }
+}

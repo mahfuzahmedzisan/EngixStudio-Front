@@ -16,7 +16,7 @@
    <title>EngixStudio</title>
 
    <style>
-      /* Initially hide second navbar */
+      /*       
       .navbar-hide {
          transform: translateY(-100%);
       }
@@ -35,17 +35,16 @@
          z-index: 10;
       }
 
-      /* Sidebar styles */
       .sidebar {
          position: fixed;
          top: 0;
          right: 0;
          z-index: 50;
-         height: 100vh; /* Full screen height */
-         width: 50%; /* Half the screen width */
-         transform: translateX(100%); /* Initially hidden */
+         height: 100vh; 
+         width: 50%; 
+         transform: translateX(100%);
          transition: transform 0.3s ease-in-out;
-         background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+         background-color: rgba(0, 0, 0, 0.7);
       }
 
       .sidebar .menu {
@@ -55,69 +54,77 @@
       .sidebar .closeSidebar {
          font-size: 24px;
          color: #fff;
-      }
+      } */
    </style>
 </head>
 
 <body>
    <!-- First Header -->
-   <header id="first-navbar" class="navbar navbar-show"> <!-- First navbar visible initially -->
-      <div class="navbar bg-base-100">
-         <div class="navbar-start">
-            <a class="btn btn-ghost text-xl">
-               <img class="w-48" src="src/images/Logo(Border).png" alt="">
-            </a>
-         </div>
+   <header id="first-navbar" class="fixed w-full top-0 left-0 right-0 z-10; navbar-show">
+      <!-- First navbar visible initially -->
+      <div class="container">
+         <div class="navbar bg-base-100">
+            <div class="navbar-start">
+               <a class="btn btn-ghost text-xl">
+                  <img class="w-48" src="src/images/Logo(Border).png" alt="">
+               </a>
+            </div>
 
-         <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-               <li><a href="">About</a></li>
-               <li><a href="">Portfolio</a></li>
-               <li><a href="">Blog</a></li>
-               <li><a href="">Contact</a></li>
-            </ul>
-         </div>
+            <div class="navbar-center hidden lg:flex">
+               <ul class="menu menu-horizontal px-1">
+                  <li><a href="">About</a></li>
+                  <li><a href="">Portfolio</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Contact</a></li>
+               </ul>
+            </div>
 
-         <div class="navbar-end">
-            <!-- Hamburger Icon -->
-            <button class="btn btn-ghost lg:hidden openSidebar">
-               <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="navbar-end">
+               <button class="btn btn-ghost lg:hidden openSidebar">
+                  <i class="fa-solid fa-bars"></i>
+               </button>
+               <a href="" class="btn btn-ghost hidden lg:inline-flex">Hire Us</a>
+            </div>
          </div>
       </div>
    </header>
 
-   <!-- Second Header (Duplicate of the first one) -->
-   <header id="second-navbar" class="navbar navbar-hide"> <!-- Second navbar hidden initially -->
-      <div class="navbar bg-base-100">
-         <div class="navbar-start">
-            <a class="btn btn-ghost text-xl">
-               <img class="w-48" src="src/images/Logo(Border).png" alt="">
-            </a>
-         </div>
+   <!-- Second Header -->
+   <header id="second-navbar" class="fixed w-full top-0 left-0 right-0 z-10; navbar-hide">
+      <!-- Second navbar hidden initially -->
+      <div class="container">
+         <div class="navbar bg-base-100">
+            <div class="navbar-start">
+               <a class="btn btn-ghost text-xl">
+                  <img class="w-48" src="src/images/Logo(Border).png" alt="">
+               </a>
+            </div>
 
-         <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-               <li><a href="">About</a></li>
-               <li><a href="">Portfolio</a></li>
-               <li><a href="">Blog</a></li>
-               <li><a href="">Contact</a></li>
-            </ul>
-         </div>
+            <div class="navbar-center hidden lg:flex">
+               <ul class="menu menu-horizontal px-1">
+                  <li><a href="">About</a></li>
+                  <li><a href="">Portfolio</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Contact</a></li>
+               </ul>
+            </div>
 
-         <div class="navbar-end">
-            <!-- Hamburger Icon -->
-            <button class="btn btn-ghost lg:hidden openSidebar">
-               <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="navbar-end">
+               <!-- Hamburger Icon -->
+               <button class="btn btn-ghost lg:hidden openSidebar">
+                  <i class="fa-solid fa-bars"></i>
+               </button>
+               <a href="" class="btn btn-ghost hidden lg:inline-flex">Hire Us</a>
+            </div>
          </div>
       </div>
    </header>
 
    <!-- Sidebar -->
-   <div class="sidebar">
+   <div
+      class="sidebar fixed top-0 right-0 z-50 h-screen w-1/2 translate-x-full transition-all duration-300 ease-in-out bg-black/30">
       <div class="flex justify-end p-4">
-         <button class="btn btn-ghost closeSidebar">
+         <button class="btn btn-ghost text-white text-2xl closeSidebar">
             <i class="fa-solid fa-xmark"></i>
          </button>
       </div>
@@ -136,57 +143,8 @@
    </main>
 
    <!-- Custom JS -->
-   <script>
-      const openSidebar = document.querySelectorAll('.openSidebar');
-      const closeSidebar = document.querySelectorAll('.closeSidebar');
-      const sidebar = document.querySelector('.sidebar'); // Select the sidebar element globally
 
-      // Navbar functionality
-      const firstNavbar = document.getElementById('first-navbar');
-      const secondNavbar = document.getElementById('second-navbar');
-      let lastScrollPosition = 0;
-
-      // Sidebar open/close functionality
-      openSidebar.forEach(btn => {
-         btn.addEventListener('click', () => {
-            sidebar.style.transform = 'translateX(0)'; // Show the sidebar (move to visible position)
-            btn.classList.add('hidden'); // Hide the open button
-         });
-      });
-
-      closeSidebar.forEach(btn => {
-         btn.addEventListener('click', () => {
-            sidebar.style.transform = 'translateX(100%)'; // Hide the sidebar (move off-screen)
-            setTimeout(() => {
-               // Show the corresponding openSidebar button after the sidebar closes
-               openSidebar.forEach(openBtn => openBtn.classList.remove('hidden'));
-            }, 300); // Delay to wait for sidebar transition to finish
-         });
-      });
-
-      // Scroll event listener for navbar transitions
-      window.addEventListener('scroll', () => {
-         const scrollPosition = window.scrollY;
-
-         // Scrolling down
-         if (scrollPosition > 150 && scrollPosition > lastScrollPosition) {
-            firstNavbar.classList.remove('navbar-show');  // Hide the first navbar
-            firstNavbar.classList.add('navbar-hide');
-            secondNavbar.classList.remove('navbar-hide'); // Show the second navbar
-            secondNavbar.classList.add('navbar-show');
-         }
-         // Scrolling up
-         else if (scrollPosition < lastScrollPosition && scrollPosition <= 150) {
-            firstNavbar.classList.remove('navbar-hide');  // Show the first navbar
-            firstNavbar.classList.add('navbar-show');
-            secondNavbar.classList.remove('navbar-show');
-            secondNavbar.classList.add('navbar-hide');
-         }
-
-         // Update last scroll position
-         lastScrollPosition = scrollPosition;
-      });
-   </script>
+   <script src="src/js/header.js"></script>
 
 </body>
 
