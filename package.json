@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.2"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "minify": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch --minify"
+  },
+  "dependencies": {
+    "daisyui": "^4.12.14"
+  }
+}
