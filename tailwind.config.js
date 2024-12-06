@@ -23,7 +23,17 @@ module.exports = {
       },
       fontFamily: {
         'FontAwesome': ['FontAwesome'],
-      }
+        'Playfair': ['Playfair Display', 'serif'],
+      },
+      animation: {
+        slider: 'slider 8s linear infinite',
+      },
+      keyframes: {
+        slider: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
     },
     container: {
       center: true,
