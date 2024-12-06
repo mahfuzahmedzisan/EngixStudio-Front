@@ -20,6 +20,9 @@ module.exports = {
         't-black': '#070709',
         't-white': '#FFFFFF',
         't-gray': '#A0A0A0',
+      },
+      fontFamily: {
+        'FontAwesome': ['FontAwesome'],
       }
     },
     container: {
