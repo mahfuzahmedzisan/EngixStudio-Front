@@ -34,4 +34,8 @@
   .hire-btn:hover {
     @apply border-t-black bg-t-primary text-white;
   }
+
+  .footer-nav {
+    @apply py-1 text-lg text-t-white hover:text-t-primary;
+  }
 }
