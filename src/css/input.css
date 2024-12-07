@@ -41,13 +41,72 @@
     @apply py-1 text-lg text-t-white hover:text-t-primary;
   }
 
-  /* Home Page Hero Section */
+  /* ==========  Start Home Page ==========  */
 
-  .brands .swiper-slide{
+  /*Hero & Intro Section */
+
+  /* Hero Content  */
+  .hero-bg {
+    @apply absolute w-full xl:w-auto xl:inset-x-10 h-full lg:h-[90%] -z-10 bg-cover bg-center xl:my-5 pb-10 rounded-3xl;
+    background-image: url('../images/hero-bg.png');
+  }
+
+  .hero-section {
+    @apply w-full min-h-screen flex pt-36 flex-col justify-center gap-24 items-center;
+  }
+
+  .hero-section .title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center text-t-black font-Playfair;
+  }
+
+  .hero-section .title span {
+    @apply block text-2xl md:text-3xl lg:text-4xl mt-5;
+  }
+
+  .hero-section .description {
+    @apply text-center text-t-black py-12 md:px-16 text-lg lg:text-xl leading-8;
+  }
+
+  .hero-section .contact-btn {
+    @apply inline-block px-5 py-2 md:px-7 md:py-3 font-bold text-xl hover:bg-t-black transition-all duration-500 rounded-full bg-t-primary text-t-white relative;
+  }
+
+  .hero-section .contact-btn span {
+    @apply absolute top-0 right-full w-16 xs:w-24 h-auto animate-bounce;
+  }
+
+  /* Brand Slide Section  */
+  .brands {
+    @apply w-full p-5 backdrop-blur-md shadow-md shadow-gray-400 mx-auto px-5 md:px-10 xl:px-20 bg-t-black/5;
+  }
+
+  .brands .swiper-slide {
     @apply flex w-auto px-10;
   }
 
-  .brands .swiper-slide img{
+  .brands .swiper-slide img {
     @apply w-44 h-auto object-cover rounded-lg;
   }
+
+  /* Intro Section  */
+  .intro {
+    @apply relative w-full md:w-3/4 mx-auto rounded-xl overflow-hidden shadow-lg;
+  }
+
+  .intro .video {
+    @apply inset-0 rounded-xl p-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500;
+  }
+
+  .intro .video video {
+    @apply w-full h-auto object-cover rounded-lg;
+  }
+
+  .intro #videoControlBtn {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 w-16 h-16 rounded-full transition-all duration-500 text-white hover:bg-opacity-70 group-hover:opacity-100 transform scale-100 group-hover:scale-110;
+  }
+
+  .intro #playIcon {
+    @apply w-full h-full flex items-center justify-center text-3xl;
+  }
+
 }

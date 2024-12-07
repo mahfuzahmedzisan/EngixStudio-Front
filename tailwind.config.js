@@ -27,7 +27,10 @@ module.exports = {
         'FontAwesome': ['FontAwesome'],
         'Playfair': ['Playfair Display', 'serif'],
       },
-      
+      boxShadow: {
+        '3xl': '0 10px 10 30px rgba(0, 0, 0, 1)',
+      },
+
     },
     container: {
       center: true,
