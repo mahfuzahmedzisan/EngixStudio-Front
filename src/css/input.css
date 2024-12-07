@@ -45,23 +45,6 @@
     @apply py-1 text-lg text-t-white hover:text-t-primary;
   }
 
-
-  .tittle {
-    @apply text-center mb-10;
-  }
-
-  .tittle .title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-t-black font-Playfair;
-  }
-
-  .tittle .subtitle {
-    @apply text-lg md:text-xl font-semibold text-t-black;
-  }
-
-  .tittle .description {
-    @apply text-center text-t-black pt-3 md:px-16 text-base lg:text-lg leading-8;
-  }
-
   /* ==========  Start Home Page ==========  */
 
   /* +++++++++++++++++++++ Hero & Intro Section +++++++++++++++++++++ */
@@ -145,7 +128,76 @@
   }
 
   .award-section .card .award-on {
-    @apply text-base text-t-black text-center;
+    @apply text-base text-center text-t-gray;
   }
 
+
+
+  /* +++++++++++++++++++++ Work Section +++++++++++++++++++++  */
+  .work-section {
+    @apply bg-t-black xl:mx-10 xl:my-5 xl:rounded-3xl py-20 text-t-white;
+  }
+
+  .work-section .titles {
+    @apply flex flex-col lg:flex-row justify-between items-center mb-28 gap-5;
+  }
+
+  .work-section .titles .title {
+    @apply mb-8 lg:mb-0 text-center lg:text-left;
+  }
+
+  .work-section .titles .title h4 {
+    @apply text-t-primary text-xl font-semibold;
+  }
+
+  .work-section .titles .title h2 {
+    @apply text-3xl lg:text-5xl font-extrabold text-t-white font-Jakarta mt-5 leading-snug;
+  }
+
+  .work-section .titles .desc {
+    @apply text-left max-w-lg;
+  }
+
+  .work-section .titles .desc p {
+    @apply text-t-gray-2 text-lg;
+  }
+
+  .work-section .work-card {
+    @apply bg-black text-t-white rounded-lg overflow-hidden shadow-lg flex gap-16;
+  }
+
+  .work-section .work-card .image {
+    @apply w-full md:w-3/5 inline-block relative;
+  }
+
+  .work-section .work-card .image img {
+    @apply w-full h-full object-contain;
+  }
+
+  .work-section .work-card .image a {
+    @apply absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-all duration-300;
+  }
+
+  .work-section .work-card .image a span {
+    @apply w-24 h-24 flex items-center justify-center rounded-full text-t-black bg-t-white/20 shadow-sm shadow-t-black/30 text-lg;
+  }
+
+  .work-section .work-card .content {
+    @apply p-6 flex flex-col justify-between md:w-3/6;
+  }
+
+  .work-section .work-card .author {
+    @apply text-t-primary font-semibold text-sm;
+  }
+
+  .work-section .work-card .title {
+    @apply text-xl lg:text-3xl font-bold mt-2 hover:text-t-primary transition-all duration-300;
+  }
+
+  .work-section .work-card .content p {
+    @apply text-t-gray-2 mt-4;
+  }
+  .work-section .work-card .view {
+    @apply text-t-primary mt-4 inline-block;
+  }
 }

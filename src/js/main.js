@@ -65,3 +65,40 @@ video.addEventListener('mouseleave', () => {
    if (!video.paused) hideControls();
 });
 
+
+
+// Work Seciton
+
+const caseStudiesContainer = document.getElementById("caseStudiesContainer");
+         const loadMoreBtn = document.getElementById("loadMoreBtn");
+         const loadLessBtn = document.getElementById("loadLessBtn");
+         const cards = Array.from(caseStudiesContainer.children);
+
+         const initialVisible = 2; // Show only the first two cards initially
+         let currentlyVisible = initialVisible;
+
+         // Update visibility
+         const updateVisibility = () => {
+            cards.forEach((card, index) => {
+               card.classList.toggle("hidden", index >= currentlyVisible);
+            });
+         };
+
+         // Show all cards
+         loadMoreBtn.addEventListener("click", () => {
+            currentlyVisible = cards.length;
+            updateVisibility();
+            loadMoreBtn.classList.add("hidden");
+            loadLessBtn.classList.remove("hidden");
+         });
+
+         // Show fewer cards
+         loadLessBtn.addEventListener("click", () => {
+            currentlyVisible = initialVisible;
+            updateVisibility();
+            loadLessBtn.classList.add("hidden");
+            loadMoreBtn.classList.remove("hidden");
+         });
+
+         // Initialize
+         updateVisibility();
