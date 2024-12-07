@@ -22,10 +22,15 @@ module.exports = {
         't-gray': '#A0A0A0',
 
         'bg-primary': '#F5F1EE',
+        'bg-secondary': '#EDC0F0',
+        'bg-tertiary': '#E7D8FF',
+        'bg-quaternary': '#FFD9D9',
       },
       fontFamily: {
         'FontAwesome': ['FontAwesome'],
         'Playfair': ['Playfair Display', 'serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
+        'Jakarta': ['Plus Jakarta Sans', 'sans-serif'],
       },
       boxShadow: {
         '3xl': '0 10px 10 30px rgba(0, 0, 0, 1)',

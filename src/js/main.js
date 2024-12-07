@@ -1,6 +1,6 @@
 
 // Brands Slider
-const swiper = new Swiper('.brands .swiper', {
+const brandsSwiper = new Swiper('.brands .swiper', {
    slidesPerView: "auto",
    loop: true,
    centeredSlides: true,
@@ -15,52 +15,53 @@ const swiper = new Swiper('.brands .swiper', {
 // Inro Section Video Play Button
 
 const video = document.getElementById('introVideo');
-   const videoControlBtn = document.getElementById('videoControlBtn');
-   const playIcon = document.getElementById('playIcon');
+const videoControlBtn = document.getElementById('videoControlBtn');
+const playIcon = document.getElementById('playIcon');
 
-   let hideTimeout;
+let hideTimeout;
 
-   const showControls = () => {
-      videoControlBtn.classList.remove('opacity-0');
-   };
+const showControls = () => {
+   videoControlBtn.classList.remove('opacity-0');
+};
 
-   const hideControls = () => {
-      hideTimeout = setTimeout(() => {
-         videoControlBtn.classList.add('opacity-0');
-      }, 2000); // Hide after 2 seconds
-   };
+const hideControls = () => {
+   hideTimeout = setTimeout(() => {
+      videoControlBtn.classList.add('opacity-0');
+   }, 2000);
+};
 
-   const resetHideTimeout = () => {
-      clearTimeout(hideTimeout);
+const resetHideTimeout = () => {
+   clearTimeout(hideTimeout);
+   hideControls();
+};
+
+// Play/Pause button logic
+videoControlBtn.addEventListener('click', () => {
+   if (video.paused) {
+      video.play();
+      video.muted = false;
+      video.setAttribute('controls', 'controls');
+      playIcon.classList.remove('fa-play');
+      playIcon.classList.add('fa-pause');
       hideControls();
-   };
-
-   // Play/Pause button logic
-   videoControlBtn.addEventListener('click', () => {
-      if (video.paused) {
-         video.play();
-         video.muted = false; // Unmute the video when it plays
-         video.setAttribute('controls', 'controls'); // Show video controls
-         playIcon.classList.remove('fa-play');
-         playIcon.classList.add('fa-pause'); // Change to pause icon
-         hideControls(); // Start hiding the button
-      } else {
-         video.pause();
-         video.removeAttribute('controls'); // Hide video controls
-         playIcon.classList.remove('fa-pause');
-         playIcon.classList.add('fa-play'); // Change to play icon
-         showControls(); // Keep button visible when paused
-         clearTimeout(hideTimeout); // Stop hiding
-      }
-   });
-
-   // Show controls when the mouse moves over the video
-   video.addEventListener('mousemove', () => {
+   } else {
+      video.pause();
+      video.removeAttribute('controls');
+      playIcon.classList.remove('fa-pause');
+      playIcon.classList.add('fa-play');
       showControls();
-      resetHideTimeout();
-   });
+      clearTimeout(hideTimeout);
+   }
+});
 
-   // Hide controls when mouse stops moving over the video
-   video.addEventListener('mouseleave', () => {
-      if (!video.paused) hideControls();
-   });
+// Show controls when the mouse moves over the video
+video.addEventListener('mousemove', () => {
+   showControls();
+   resetHideTimeout();
+});
+
+// Hide controls when mouse stops moving over the video
+video.addEventListener('mouseleave', () => {
+   if (!video.paused) hideControls();
+});
+
