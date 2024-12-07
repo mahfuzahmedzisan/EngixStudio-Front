@@ -40,4 +40,14 @@
   .footer-nav {
     @apply py-1 text-lg text-t-white hover:text-t-primary;
   }
+
+  /* Home Page Hero Section */
+
+  .brands .swiper-slide{
+    @apply flex w-auto px-10;
+  }
+
+  .brands .swiper-slide img{
+    @apply w-44 h-auto object-cover rounded-lg;
+  }
 }

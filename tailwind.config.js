@@ -20,20 +20,14 @@ module.exports = {
         't-black': '#070709',
         't-white': '#FFFFFF',
         't-gray': '#A0A0A0',
+
+        'bg-primary': '#F5F1EE',
       },
       fontFamily: {
         'FontAwesome': ['FontAwesome'],
         'Playfair': ['Playfair Display', 'serif'],
       },
-      animation: {
-        slider: 'slider 8s linear infinite',
-      },
-      keyframes: {
-        slider: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-      },
+      
     },
     container: {
       center: true,
