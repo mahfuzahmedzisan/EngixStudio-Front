@@ -23,6 +23,7 @@ module.exports = {
         't-gray': '#A0A0A0',
         't-gray-2': '#9A9A98',
 
+        'bg-white': '#F9F9FE',
         'bg-primary': '#F5F1EE',
         'bg-secondary': '#EDC0F0',
         'bg-tertiary': '#E7D8FF',

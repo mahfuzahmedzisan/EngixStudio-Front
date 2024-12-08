@@ -1,93 +1,101 @@
 import Swiper from '../../vendor/js/swiper-bundle.min.js';
 
-// +++++++++++++++++  Brands Slider ++++++++++++++++++
-const brandsSwiper = new Swiper('.brands .swiper', {
-   slidesPerView: "auto",
-   loop: true,
-   centeredSlides: true,
-   speed: 2000,
-   allowTouchMove: false,
-   disableOnInteraction: false,
-   autoplay: {
-      delay: 1,
-   },
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-// ++++++++++++++++ Inro Section Video Play Button ++++++++++++++++++++
 
-const video = document.getElementById('introVideo');
-const videoControlBtn = document.getElementById('videoControlBtn');
-const playIcon = document.getElementById('playIcon');
+   // +++++++++++++++++  Brands Slider ++++++++++++++++++
+   const brandsSwiper = new Swiper('.brands .swiper', {
+      slidesPerView: "auto",
+      loop: true,
+      centeredSlides: true,
+      speed: 3000,
+      allowTouchMove: false,
+      disableOnInteraction: false,
+      autoplay: {
+         delay: 1,
+      },
+   });
 
-let hideTimeout;
+   // ++++++++++++++++ Inro Section Video Play Button ++++++++++++++++++++
 
-const showControls = () => {
-   videoControlBtn.classList.remove('opacity-0');
-};
+   const video = document.getElementById('introVideo');
+   const videoControlBtn = document.getElementById('videoControlBtn');
+   const playIcon = document.getElementById('playIcon');
 
-const hideControls = () => {
-   hideTimeout = setTimeout(() => {
-      videoControlBtn.classList.add('opacity-0');
-   }, 2000);
-};
+   let hideTimeout;
 
-const resetHideTimeout = () => {
-   clearTimeout(hideTimeout);
-   hideControls();
-};
+   const showControls = () => {
+      videoControlBtn.classList.remove('opacity-0');
+   };
 
-// Play/Pause button logic
-videoControlBtn.addEventListener('click', () => {
-   if (video.paused) {
-      video.play();
-      video.muted = false;
-      video.setAttribute('controls', 'controls');
-      playIcon.classList.remove('fa-play');
-      playIcon.classList.add('fa-pause');
-      hideControls();
-   } else {
-      video.pause();
-      video.removeAttribute('controls');
-      playIcon.classList.remove('fa-pause');
-      playIcon.classList.add('fa-play');
-      showControls();
+   const hideControls = () => {
+      hideTimeout = setTimeout(() => {
+         videoControlBtn.classList.add('opacity-0');
+      }, 2000);
+   };
+
+   const resetHideTimeout = () => {
       clearTimeout(hideTimeout);
-   }
-});
+      hideControls();
+   };
 
-// Show controls when the mouse moves over the video
-video.addEventListener('mousemove', () => {
-   showControls();
-   resetHideTimeout();
-});
+   // Play/Pause button logic
+   videoControlBtn.addEventListener('click', () => {
+      if (video.paused) {
+         video.play();
+         video.muted = false;
+         video.setAttribute('controls', 'controls');
+         playIcon.classList.remove('fa-play');
+         playIcon.classList.add('fa-pause');
+         hideControls();
+      } else {
+         video.pause();
+         video.removeAttribute('controls');
+         playIcon.classList.remove('fa-pause');
+         playIcon.classList.add('fa-play');
+         showControls();
+         clearTimeout(hideTimeout);
+      }
+   });
 
-// Hide controls when mouse stops moving over the video
-video.addEventListener('mouseleave', () => {
-   if (!video.paused) hideControls();
-});
+   // Show controls when the mouse moves over the video
+   video.addEventListener('mousemove', () => {
+      showControls();
+      resetHideTimeout();
+   });
+
+   // Hide controls when mouse stops moving over the video
+   video.addEventListener('mouseleave', () => {
+      if (!video.paused) hideControls();
+   });
 
 
 
-// +++++++++++++ Work Seciton +++++++++++++++
+   // Service Section
 
-document.getElementById('toggle-cards').addEventListener('click', function () {
-   const hiddenCards = document.querySelectorAll('.work-card.hide');
-   const button = this;
+   const serviceSwiper = new Swiper('.service-cards .swiper', {
+      slidesPerView: 3,
+      loop: true,
+      spaceBetween: 10,      
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev',
+      },
+      speed: 2000,
+      autoplay: {
+         delay: 5000,
+      },
+      breakpoints: {
+         0: {
+            slidesPerView: 1,
+         },
+         640: {
+            slidesPerView: 2,
+         },
+         992: {
+            slidesPerView: 3,
+         },
+      },
+   });
 
-   if (hiddenCards.length > 0) {
-      // Show all hidden cards
-      hiddenCards.forEach((card) => card.classList.remove('hidden'));
-      setTimeout(() => {
-         hiddenCards.forEach((card) => card.classList.remove('hide'));
-      }, 50)
-      button.textContent = 'Load Less';
-   } else {
-      // Hide cards beyond the first 4
-      document.querySelectorAll('.work-card:nth-child(n+5)').forEach((card) => card.classList.add('hide'));
-      setTimeout(() => {
-         document.querySelectorAll('.work-card:nth-child(n+5)').forEach((card) => card.classList.add('hidden'));
-      }, 500)
-      button.textContent = 'Load More';
-   }
-});
-
+})

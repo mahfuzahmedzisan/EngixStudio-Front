@@ -41,10 +41,10 @@
             </div>
 
             <div class="navbar-end">
-               <button class="lg:hidden openSidebar text-2xl">
+               <button class="openSidebar lg:hidden text-2xl text-t-white">
                   <i class="fa-solid fa-bars"></i>
                </button>
-               <a href="" class="hire-btn btn hidden lg:inline-flex">Hire Us</a>
+               <a href="contact.html" class="nav-btn btn hidden lg:inline-flex">Contact Us</a>
             </div>
          </div>
       </div>
@@ -73,7 +73,7 @@
                <button class="lg:hidden openSidebar text-2xl">
                   <i class="fa-solid fa-bars"></i>
                </button>
-               <a href="" class="hire-btn btn hidden lg:inline-flex">Hire Us</a>
+               <a href="contact.html" class="nav-btn btn hidden lg:inline-flex">Contact Us</a>
             </div>
          </div>
       </div>
@@ -125,8 +125,8 @@
                   </p>
 
                   <div class="text-center">
-                     <a href="contact.html" class="contact-btn">
-                        Contact Us
+                     <a href="portfolio.html" class="hero-btn">
+                        Portfolio
                         <span>
                            <img src="src/images/animate.png" alt="">
                         </span>
@@ -176,13 +176,26 @@
             <!-- =========== Intro Section =========== -->
             <div class="container">
                <div class="intro">
-                  <div class="video">
-                     <video id="introVideo" src="src/videos/Design Monks Intro_FHD_DOWNLOAD.mp4" loop></video>
+                  <div class="relative">
+                     <div class="video">
+                        <video id="introVideo" src="src/videos/Design Monks Intro_FHD_DOWNLOAD.mp4" loop></video>
 
+                     </div>
+                     <button id="videoControlBtn" class="opacity-0">
+                        <i id="playIcon" class="fas fa-play"></i>
+                     </button>
                   </div>
-                  <button id="videoControlBtn" class="opacity-0">
-                     <i id="playIcon" class="fas fa-play"></i>
-                  </button>
+                  <div class="intro-content">
+                     <h2>
+                        About Us
+                     </h2>
+                     <p>
+                        At EngixStudio, we are a team of passionate designers and developers who believe in the power of
+                        design to transform ideas into reality. With a strong focus on user experience and innovation,
+                        we
+                        create visually stunning and intuitive digital experiences that leave a lasting impact.
+                     </p>
+                  </div>
                </div>
             </div>
 
@@ -192,10 +205,9 @@
 
       <!-- +++++++++++++++++++++ Award Section +++++++++++++++++++++ -->
 
-      <section class="award-section py-16">
+      <!-- <section class="award-section py-16">
          <div class="container">
             <div class="award-cards">
-               <!-- Award 1 -->
                <div class="card bg-bg-tertiary">
                   <div>
                      <img class="w-16 h-auto" src="src/images/award/award.svg" alt="Award 1" />
@@ -206,7 +218,6 @@
                   </div>
                </div>
 
-               <!-- Award 2 -->
                <div class="card bg-bg-secondary">
                   <div>
                      <img class="w-16 h-auto" src="src/images/award/google.svg" alt="Award 2" />
@@ -217,7 +228,6 @@
                   </div>
                </div>
 
-               <!-- Award 3 -->
                <div class="card bg-bg-quaternary">
                   <div>
                      <img class="w-16 h-auto" src="src/images/award/Clutch.svg" alt="Award 3" />
@@ -229,7 +239,7 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
 
       <!-- +++++++++++++++++++++ Work Section +++++++++++++++++++++ -->
 
@@ -251,9 +261,9 @@
             <div class="space-y-24 work-cards">
                <!-- First 4 cards are always visible -->
                <div class="work-card flex-col md:flex-row">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  <div href="#" class="image">
+                     <img src="src/images/work/Untitled-1.jpg" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"></a>
                   </div>
                   <div class="content">
                      <a href="#" class="author">Editech</a>
@@ -265,9 +275,9 @@
                </div>
 
                <div class="work-card flex-col md:flex-row-reverse">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  <div href="#" class="image">
+                     <img src="src/images/work/Untitled-1.jpg" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"></a>
                   </div>
                   <div class="content">
                      <a href="#" class="author">Fitness Industry</a>
@@ -279,9 +289,9 @@
                </div>
 
                <div class="work-card flex-col md:flex-row">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  <div href="#" class="image">
+                     <img src="src/images/work/Untitled-1.jpg" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"></a>
                   </div>
                   <div class="content">
                      <a href="#" class="author">HealthTech</a>
@@ -293,9 +303,9 @@
                </div>
 
                <div class="work-card flex-col md:flex-row-reverse">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  <div href="#" class="image">
+                     <img src="src/images/work/Untitled-1.jpg" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"></a>
                   </div>
                   <div class="content">
                      <a href="#" class="author">E-Commerce</a>
@@ -306,73 +316,11 @@
                   </div>
                </div>
 
-               <!-- Additional cards are initially hidden -->
-               <div class="work-card flex-col md:flex-row hide hidden">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
-                  </div>
-                  <div class="content">
-                     <a href="#" class="author">FinTech</a>
-                     <a href="" class="title">Redefining Financial Inclusion</a>
-                     <p>Our innovative mobile wallet enables secure and convenient transactions for underbanked
-                        communities...</p>
-                     <a href="#" class="view">Check Full Case Study</a>
-                     <p>Hide</p>
-                  </div>
-               </div>
-
-               <div class="work-card flex-col md:flex-row-reverse hide hidden">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
-                  </div>
-                  <div class="content">
-                     <a href="#" class="author">Education</a>
-                     <a href="" class="title">Empowering Digital Learning</a>
-                     <p>We created an adaptive learning platform that tailors content to each student’s needs, enhancing
-                        engagement and outcomes...</p>
-                     <a href="#" class="view">Check Full Case Study</a>
-                     <p>Hide</p>
-                  </div>
-               </div>
-
-               <div class="work-card flex-col md:flex-row hide hidden">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
-                  </div>
-                  <div class="content">
-                     <a href="#" class="author">FinTech</a>
-                     <a href="" class="title">Redefining Financial Inclusion</a>
-                     <p>Our innovative mobile wallet enables secure and convenient transactions for underbanked
-                        communities...</p>
-                     <a href="#" class="view">Check Full Case Study</a>
-                     <p>Hide</p>
-                  </div>
-               </div>
-
-               <div class="work-card flex-col md:flex-row-reverse hide hidden">
-                  <div href="#" class="image group/image">
-                     <img src="src/images/hero-bg.png" alt="Case Study Image">
-                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
-                  </div>
-                  <div class="content">
-                     <a href="#" class="author">Education</a>
-                     <a href="" class="title">Empowering Digital Learning</a>
-                     <p>We created an adaptive learning platform that tailors content to each student’s needs, enhancing
-                        engagement and outcomes...</p>
-                     <a href="#" class="view">Check Full Case Study</a>
-                     <p>Hide</p>
-                  </div>
-               </div>
-
-               <!-- Repeat for other hidden cards as needed -->
             </div>
 
             <!-- Load More/Load Less Buttons -->
             <div class="text-center">
-               <button class="load-more-btn" id="toggle-cards">Load More</button>
+               <a href="portfolio.html" class="view-more">View All Case Studies</a>
             </div>
          </div>
       </section>
@@ -477,72 +425,102 @@
                   results.</p>
             </div>
 
-            <div class="service-cards">
-               <div class="card">
-                  <div class="icon">
-                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+            <div class="service-cards relative">
+               <div class="swiper">
+                  <div class="swiper-wrapper py-5">
+                     <div class="swiper-slide">
+                        <div class="card group">
+                           <div class="icon">
+                              <img class="group-hover:-scale-x-100" src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                           </div>
+                           <div class="content">
+                              <h2>UI/UX Design</h2>
+                              <p>We craft intuitive and user-centered designs that enhance user experiences and elevate
+                                 your
+                                 digital presence.</p>
+                              <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="card group">
+                           <div class="icon">
+                              <img class="group-hover:-scale-x-100" src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                           </div>
+                           <div class="content">
+                              <h2>Web Design</h2>
+                              <p>From landing pages to complex websites, we design web solutions that are visually
+                                 appealing and
+                                 fully functional.</p>
+                              <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="card group">
+                           <div class="icon">
+                              <img class="group-hover:-scale-x-100" src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                           </div>
+                           <div class="content">
+                              <h2>Logo & Brand Design</h2>
+                              <p>Our creative team designs unique logos and cohesive brand identities that resonate with
+                                 your
+                                 target audience.</p>
+                              <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="card group">
+                           <div class="icon">
+                              <img class="group-hover:-scale-x-100" src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                           </div>
+                           <div class="content">
+                              <h2>UX Audit</h2>
+                              <p>Identify usability issues and opportunities for improvement with our detailed UX audit
+                                 process.
+                              </p>
+                              <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="card group">
+                           <div class="icon">
+                              <img class="group-hover:-scale-x-100" src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                           </div>
+                           <div class="content">
+                              <h2>SaaS Design</h2>
+                              <p>Specializing in SaaS platforms, we create scalable designs tailored to streamline
+                                 operations and
+                                 boost user engagement.</p>
+                              <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="card group">
+                           <div class="icon">
+                              <img class="group-hover:-scale-x-100" src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                           </div>
+                           <div class="content">
+                              <h2>Graphic Design</h2>
+                              <p>Whether it’s brochures, posters, or digital media, our graphic designs bring your
+                                 vision to life
+                                 with creative flair.</p>
+                              <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="content">
-                     <h2>UI/UX Design</h2>
-                     <p>We craft intuitive and user-centered designs that enhance user experiences and elevate your
-                        digital presence.</p>
-                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="icon">
-                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
-                  </div>
-                  <div class="content">
-                     <h2>Web Design</h2>
-                     <p>From landing pages to complex websites, we design web solutions that are visually appealing and
-                        fully functional.</p>
-                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="icon">
-                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
-                  </div>
-                  <div class="content">
-                     <h2>Logo & Brand Design</h2>
-                     <p>Our creative team designs unique logos and cohesive brand identities that resonate with your
-                        target audience.</p>
-                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="icon">
-                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
-                  </div>
-                  <div class="content">
-                     <h2>UX Audit</h2>
-                     <p>Identify usability issues and opportunities for improvement with our detailed UX audit process.
-                     </p>
-                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="icon">
-                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
-                  </div>
-                  <div class="content">
-                     <h2>SaaS Design</h2>
-                     <p>Specializing in SaaS platforms, we create scalable designs tailored to streamline operations and
-                        boost user engagement.</p>
-                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="icon">
-                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
-                  </div>
-                  <div class="content">
-                     <h2>Graphic Design</h2>
-                     <p>Whether it’s brochures, posters, or digital media, our graphic designs bring your vision to life
-                        with creative flair.</p>
-                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
-                  </div>
+
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                </div>
             </div>
 
