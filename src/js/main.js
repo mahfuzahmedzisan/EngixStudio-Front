@@ -1,4 +1,6 @@
 
+import Swiper from '/vendor/js/swiper-bundle.min.js';
+
 // +++++++++++++++++  Brands Slider ++++++++++++++++++
 const brandsSwiper = new Swiper('.brands .swiper', {
    slidesPerView: "auto",
