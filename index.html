@@ -11,15 +11,18 @@
       integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+   <!-- Swiper CSS  -->
+   <link rel="stylesheet" href="vendor/css/swiper.css">
+
    <!-- Custom CSS -->
    <link rel="stylesheet" href="src/css/input.css">
    <title>EngixStudio</title>
 
 </head>
 
-<body class="">
+<body>
    <!-- First Header -->
-   <header id="first-navbar" class="fixed w-full top-0 left-0 right-0 z-10; navbar-show">
+   <header id="first-navbar" class="navbar-show">
       <div class="container">
          <div class="navbar py-2">
             <div class="navbar-start">
@@ -48,8 +51,7 @@
    </header>
 
    <!-- Second Header -->
-   <header id="second-navbar"
-      class="fixed w-full top-0 left-0 right-0 z-10; navbar-hide backdrop-blur-sm shadow-md shadow-gray-300 bg-white/40">
+   <header id="second-navbar" class="navbar-hide">
       <div class="container">
          <div class="navbar">
             <div class="navbar-start">
@@ -78,16 +80,14 @@
    </header>
 
    <!-- Sidebar -->
-   <div
-      class="sidebar fixed top-0 right-0 z-50 h-screen w-2/3 translate-x-full transition-all duration-300 ease-in-out bg-white shadow-lg shadow-gray-300">
+   <div class="sidebar">
 
-      <div class="flex justify-between items-center p-4 border-b">
+      <div class="sidebar-btn flex p-4">
          <a href="" class="">
-            <img class="w-3/4" src="src/images/Logo(Border).png" alt="">
+            <img class="w-full sm:w-3/4" src="src/images/Logo(Border).png" alt="">
          </a>
          <button class="closeSidebar">
-            <i
-               class="fa-solid fa-xmark w-10 h-10 flex items-center justify-center bg-c-primary rounded-full text-white"></i>
+            <i class="fa-solid fa-xmark"></i>
          </button>
       </div>
       <ul class="menu p-0 pt-6">
@@ -99,68 +99,485 @@
    </div>
 
    <main>
-      <div class="h-screen">
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur placeat obcaecati perspiciatis labore
-         asperiores qui ut quis, excepturi aut minus odio quaerat recusandae quisquam esse voluptates at dolor eum
-         voluptate, cum, accusantium harum eaque? Eligendi repellat vel suscipit ratione quibusdam illum provident
-         dolorum neque sunt. Fugiat facilis blanditiis quidem officiis ut accusantium quod quos, ullam sit dolor
-         suscipit sint, nam quasi aliquid incidunt consequuntur minus velit necessitatibus delectus libero alias, eaque
-         quisquam? Expedita culpa eligendi sit, hic enim voluptate consequatur libero quo obcaecati in voluptatem fugit
-         sint, cum rerum deserunt optio vel ipsum error dolorum iure et. Quam saepe doloribus atque officia aperiam
-         autem alias nulla sequi, cumque consequuntur non incidunt vitae in mollitia aut laudantium quaerat, nam
-         quisquam ipsam fugiat porro iure laborum, ratione veniam. Omnis, soluta unde atque nemo assumenda consequuntur
-         officiis itaque quam molestias aliquid expedita tenetur id harum facere tempora voluptatibus libero, dolorum
-         voluptates. Voluptates repudiandae eaque neque. Ipsam officia laboriosam assumenda explicabo voluptate
-         excepturi asperiores quo adipisci repudiandae tempore distinctio in, sit quibusdam eius facere ex! Voluptate,
-         similique minima quibusdam, deleniti soluta omnis blanditiis quos quasi amet, laudantium doloribus at? Alias
-         quae et recusandae id fuga incidunt velit dolores, ab accusamus excepturi quibusdam, dolor doloremque.
-      </div>
-      <div class="h-screen">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsam ipsum laborum ipsa dolor nesciunt
-         veniam eum maiores fuga distinctio quos suscipit alias quae similique, voluptatibus odio? Possimus impedit
-         fugit, veniam repudiandae porro adipisci. Voluptates numquam eaque nemo itaque accusamus repellendus ipsam a
-         veniam accusantium, inventore possimus soluta dolores ex ipsum aliquam pariatur voluptas repudiandae ratione
-         cupiditate excepturi magnam rem. Deserunt consectetur, earum quisquam nemo esse explicabo, sed eum possimus et
-         rem ea reiciendis repellendus. Rem vitae laboriosam non eveniet quis, eligendi earum sint consequuntur id, quas
-         distinctio ipsum soluta minus magni consectetur sequi cum velit praesentium sunt, tenetur ducimus commodi?
-         Maiores eaque amet ipsum! Deleniti veritatis facere quibusdam repudiandae nisi aut. Maxime voluptas sit,
-         tenetur natus ab possimus veritatis officiis est minus maiores quae unde, id, distinctio omnis. Consectetur, a
-         pariatur, quae quis expedita rerum error dolore temporibus assumenda dolores incidunt commodi cupiditate vitae
-         iure perferendis amet? Doloremque perspiciatis neque vitae accusantium dolore beatae, non rem molestias, illo
-         soluta saepe voluptatum perferendis eius sit libero dolorem molestiae eaque dignissimos harum. Beatae similique
-         dolorum laboriosam ullam odio consequuntur exercitationem nesciunt eligendi odit natus. Sapiente consequuntur
-         pariatur blanditiis, quia, molestias excepturi aspernatur nulla, maxime dolorem ab culpa non? Sed, eius
-         voluptatibus.
-      </div>
-      <div class="h-screen"></div>
+
+      <!-- +++++++++++++++++++++  Hero & Intro Section   +++++++++++++++++++++ -->
+
+      <section class="hero-intro-section relative">
+
+         <!-- =========== Background Image ========= -->
+         <span class="hero-bg"></span>
+
+         <div class="hero-section">
+            <!-- =========== Hero Content Section =========== -->
+            <div class="container">
+               <div class="w-3/4 mx-auto">
+                  <h1 class="title">
+                     "Turning Your Vision <br class="hidden sm:block mt-5"> into Reality"
+                     <span>Innovative Design, Seamless
+                        Experiences.</span>
+                  </h1>
+
+                  <p class="description">
+                     Embrace simplicity with innovative, user-friendly solutions. From smart design to impactful
+                     results,
+                     we turn
+                     ideas into reality.
+                  </p>
+
+                  <div class="text-center">
+                     <a href="contact.html" class="contact-btn">
+                        Contact Us
+                        <span>
+                           <img src="src/images/animate.png" alt="">
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <!-- =========== Brands Slide Section =========== -->
+            <div class="brands">
+               <div class="swiper">
+                  <div class="swiper-wrapper ease-linear">
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-1.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-2.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-3.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-4.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-5.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-6.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-7.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-8.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/Brands/brand-inner-9.png" alt="Brand"></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a href=""><img src="src/images/hero-bg.png" alt="Brand"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- =========== Intro Section =========== -->
+            <div class="container">
+               <div class="intro">
+                  <div class="video">
+                     <video id="introVideo" src="src/videos/Design Monks Intro_FHD_DOWNLOAD.mp4" loop></video>
+
+                  </div>
+                  <button id="videoControlBtn" class="opacity-0">
+                     <i id="playIcon" class="fas fa-play"></i>
+                  </button>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+
+      <!-- +++++++++++++++++++++ Award Section +++++++++++++++++++++ -->
+
+      <section class="award-section py-16">
+         <div class="container">
+            <div class="award-cards">
+               <!-- Award 1 -->
+               <div class="card bg-bg-tertiary">
+                  <div>
+                     <img class="w-16 h-auto" src="src/images/award/award.svg" alt="Award 1" />
+                  </div>
+                  <div>
+                     <p class="title">Best Beauty & Fashion App Design</p>
+                     <p class="award-on">Award by Design Rush</p>
+                  </div>
+               </div>
+
+               <!-- Award 2 -->
+               <div class="card bg-bg-secondary">
+                  <div>
+                     <img class="w-16 h-auto" src="src/images/award/google.svg" alt="Award 2" />
+                  </div>
+                  <div>
+                     <p class="title">4.9 Positive Review</p>
+                     <p class="award-on">on Google</p>
+                  </div>
+               </div>
+
+               <!-- Award 3 -->
+               <div class="card bg-bg-quaternary">
+                  <div>
+                     <img class="w-16 h-auto" src="src/images/award/Clutch.svg" alt="Award 3" />
+                  </div>
+                  <div>
+                     <p class="title">4.9 Positive Review</p>
+                     <p class="award-on">on Clutch</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- +++++++++++++++++++++ Work Section +++++++++++++++++++++ -->
+
+      <section class="work-section">
+         <div class="container">
+            <div class="titles">
+               <div class="title">
+                  <h4>Our Creations</h4>
+                  <h2>Inspiring Case Studies</h2>
+               </div>
+               <div class="desc">
+                  <p>
+                     Explore how we’ve transformed ideas into impactful designs and innovative solutions, creating
+                     lasting value for our clients.
+                  </p>
+               </div>
+            </div>
+
+            <div class="space-y-24 work-cards">
+               <!-- First 4 cards are always visible -->
+               <div class="work-card flex-col md:flex-row">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">Editech</a>
+                     <a href="" class="title">Transforming Micro-Book Experiences</a>
+                     <p>This mobile application, launched in 2023, has achieved significant success with over 1 million
+                        users globally and is available on...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                  </div>
+               </div>
+
+               <div class="work-card flex-col md:flex-row-reverse">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">Fitness Industry</a>
+                     <a href="" class="title">Enhancing Fitness for Australians</a>
+                     <p>Fitmate is an innovative fitness app designed to help Australians achieve their fitness goals
+                        with personalized workouts...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                  </div>
+               </div>
+
+               <div class="work-card flex-col md:flex-row">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">HealthTech</a>
+                     <a href="" class="title">Revolutionizing Patient Care</a>
+                     <p>Our telemedicine platform has empowered patients and doctors to connect seamlessly for better
+                        health outcomes...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                  </div>
+               </div>
+
+               <div class="work-card flex-col md:flex-row-reverse">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">E-Commerce</a>
+                     <a href="" class="title">Scaling Online Marketplaces</a>
+                     <p>We developed a robust platform that supports millions of transactions daily, making online
+                        shopping fast and secure...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                  </div>
+               </div>
+
+               <!-- Additional cards are initially hidden -->
+               <div class="work-card flex-col md:flex-row hide hidden">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">FinTech</a>
+                     <a href="" class="title">Redefining Financial Inclusion</a>
+                     <p>Our innovative mobile wallet enables secure and convenient transactions for underbanked
+                        communities...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                     <p>Hide</p>
+                  </div>
+               </div>
+
+               <div class="work-card flex-col md:flex-row-reverse hide hidden">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">Education</a>
+                     <a href="" class="title">Empowering Digital Learning</a>
+                     <p>We created an adaptive learning platform that tailors content to each student’s needs, enhancing
+                        engagement and outcomes...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                     <p>Hide</p>
+                  </div>
+               </div>
+
+               <div class="work-card flex-col md:flex-row hide hidden">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">FinTech</a>
+                     <a href="" class="title">Redefining Financial Inclusion</a>
+                     <p>Our innovative mobile wallet enables secure and convenient transactions for underbanked
+                        communities...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                     <p>Hide</p>
+                  </div>
+               </div>
+
+               <div class="work-card flex-col md:flex-row-reverse hide hidden">
+                  <div href="#" class="image group/image">
+                     <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     <a href="" class="group-hover/image:opacity-100 opacity-0"><span>Explore</span></a>
+                  </div>
+                  <div class="content">
+                     <a href="#" class="author">Education</a>
+                     <a href="" class="title">Empowering Digital Learning</a>
+                     <p>We created an adaptive learning platform that tailors content to each student’s needs, enhancing
+                        engagement and outcomes...</p>
+                     <a href="#" class="view">Check Full Case Study</a>
+                     <p>Hide</p>
+                  </div>
+               </div>
+
+               <!-- Repeat for other hidden cards as needed -->
+            </div>
+
+            <!-- Load More/Load Less Buttons -->
+            <div class="text-center">
+               <button class="load-more-btn" id="toggle-cards">Load More</button>
+            </div>
+         </div>
+      </section>
+
+
+      <!-- Why Us Section -->
+      <section class="why-us-section">
+         <div class="container">
+            <div class="titles">
+               <h4>Why Choose Us</h4>
+               <h2>The Benefits of Collaborating with Us</h2>
+               <p>Partnering with us means gaining access to proven solutions, dedicated support, and the tools you need
+                  to achieve your goals efficiently and effectively.</p>
+            </div>
+            <div class="space-y-10">
+
+               <div class="card-group flex-col lg:flex-row">
+                  <div class="card-lg">
+                     <div class="count">
+                        <span>01</span>
+                     </div>
+                     <div class="image">
+                        <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     </div>
+                     <div class="content">
+                        <h3 class="title">Integrated Team Collaboration</h3>
+                        <p class="desc">
+                           At EngixStudio, we don’t just work for you—we work with you. By immersing
+                           ourselves in your culture, understanding your products, and connecting with your audience,
+                           we align our efforts with your vision. Together, we build solutions that feel like an
+                           extension of your team.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card-sm">
+                     <div class="count">
+                        <span>02</span>
+                     </div>
+                     <div class="content">
+                        <h3 class="title">No Need for Micromanagement</h3>
+                        <p class="desc">
+                           Let us handle the heavy lifting. The seasoned professionals at EngixStudio bring expertise
+                           and autonomy to every project, requiring minimal direction while delivering impactful
+                           results. Free up your time and trust us to execute your design strategy seamlessly.
+                        </p>
+                     </div>
+                     <div class="image">
+                        <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     </div>
+                  </div>
+               </div>
+
+
+               <div class="card-group flex-col lg:flex-row-reverse">
+                  <div class="card-lg">
+                     <div class="count">
+                        <span>01</span>
+                     </div>
+                     <div class="image">
+                        <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     </div>
+                     <div class="content">
+                        <h3 class="title">Integrated Team Collaboration</h3>
+                        <p class="desc">
+                           At EngixStudio, we don’t just work for you—we work with you. By immersing
+                           ourselves in your culture, understanding your products, and connecting with your audience,
+                           we align our efforts with your vision. Together, we build solutions that feel like an
+                           extension of your team.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card-sm">
+                     <div class="count">
+                        <span>02</span>
+                     </div>
+                     <div class="content">
+                        <h3 class="title">No Need for Micromanagement</h3>
+                        <p class="desc">
+                           Let us handle the heavy lifting. The seasoned professionals at EngixStudio bring expertise
+                           and autonomy to every project, requiring minimal direction while delivering impactful
+                           results. Free up your time and trust us to execute your design strategy seamlessly.
+                        </p>
+                     </div>
+                     <div class="image">
+                        <img src="src/images/hero-bg.png" alt="Case Study Image">
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+      <!-- Service Seciton  -->
+      <section class="service-section">
+         <div class="container">
+            <div class="title">
+               <h4>Services</h4>
+               <h2>What We Offer</h2>
+               <p>At EngixStudio, we offer a wide range of services to help you achieve your goals and deliver
+                  exceptional
+                  results.</p>
+            </div>
+
+            <div class="service-cards">
+               <div class="card">
+                  <div class="icon">
+                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                  </div>
+                  <div class="content">
+                     <h2>UI/UX Design</h2>
+                     <p>We craft intuitive and user-centered designs that enhance user experiences and elevate your
+                        digital presence.</p>
+                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="icon">
+                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                  </div>
+                  <div class="content">
+                     <h2>Web Design</h2>
+                     <p>From landing pages to complex websites, we design web solutions that are visually appealing and
+                        fully functional.</p>
+                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="icon">
+                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                  </div>
+                  <div class="content">
+                     <h2>Logo & Brand Design</h2>
+                     <p>Our creative team designs unique logos and cohesive brand identities that resonate with your
+                        target audience.</p>
+                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="icon">
+                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                  </div>
+                  <div class="content">
+                     <h2>UX Audit</h2>
+                     <p>Identify usability issues and opportunities for improvement with our detailed UX audit process.
+                     </p>
+                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="icon">
+                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                  </div>
+                  <div class="content">
+                     <h2>SaaS Design</h2>
+                     <p>Specializing in SaaS platforms, we create scalable designs tailored to streamline operations and
+                        boost user engagement.</p>
+                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="icon">
+                     <img src="src/images/features/fea-icon-1.png" alt="Service Icon">
+                  </div>
+                  <div class="content">
+                     <h2>Graphic Design</h2>
+                     <p>Whether it’s brochures, posters, or digital media, our graphic designs bring your vision to life
+                        with creative flair.</p>
+                     <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+
    </main>
 
 
+
+
    <!-- Footer Section  -->
-   <Footer class="py-10 bg-black xl:mx-10 xl:my-5 xl:rounded-3xl">
+   <footer>
 
       <div class="container">
 
          <!-- Newsletter Section -->
          <div class="flex">
-            <div class="w-full text-white">
-               <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-                  <div class="w-full md:w-auto text-center md:text-left">
-                     <h2 class="text-2xl md:text-3xl font-semibold">
+            <div class="w-full text-t-white">
+               <div class="newsletter">
+                  <div class="title">
+                     <h2>
                         Get Our Latest News <br class="hidden md:block" /> & Updates
                      </h2>
                   </div>
 
                   <!-- Newsletter Form -->
-                  <form class="flex items-center w-full max-w-lg bg-white rounded-full shadow-md overflow-hidden">
+                  <form>
 
-                     <div class="flex items-center px-1 md:px-4 m-1">
-                        <i class="fa-solid fa-envelope text-gray-500 text-lg"></i>
+                     <div class="envelope">
+                        <i class="fa-solid fa-envelope"></i>
                      </div>
-                     <input type="email" placeholder="Business email address"
-                        class="flex-1 bg-transparent text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-0 md:px-4 px-1" />
-                     <button type="submit"
-                        class="bg-c-primary text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-t-primary transition-all duration-300 m-1">
+                     <input type="email" placeholder="Business email address" />
+                     <button type="submit">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                      </button>
                   </form>
@@ -168,26 +585,24 @@
             </div>
          </div>
 
-         <span
-            class="block w-1/2 h-px my-16 bg-gradient-to-r from-c-primary/30 via-t-primary to-c-secondary/30 mx-auto"></span>
+         <span class="line"></span>
 
          <!-- Footer Content -->
-         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-white">
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-t-white">
             <div>
                <img class="w-56" src="src/images/Logo(Border).png" alt="Logo">
-               <p class="text-lg ">
+               <p class="text-base">
                   Our highly skilled development teams <br>
                   specialized in graphic design.
                </p>
-               <div class="flex gap-3 mt-5">
-                  <a class="text-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-facebook-f"></i></a>
-                  <a class="text-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-x-twitter"></i></a>
-                  <a class="text-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-whatsapp"></i></a>
-                  <a class="text-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-dribbble"></i></a>
+               <div class="socials">
+                  <a class="group" href=""><i class="group-hover:border-t-primary fa-brands fa-facebook-f"></i></a>
+                  <a class="group" href=""><i
+                        class="group-hover:border-t-primary fa-brands fa-x-twitter"></i></a>
+                  <a class="group" href=""><i
+                        class="group-hover:border-t-primary fa-brands fa-whatsapp"></i></a>
+                  <a class="group" href=""><i
+                        class="group-hover:border-t-primary fa-brands fa-dribbble"></i></a>
                </div>
             </div>
             <div class="flex flex-col">
@@ -230,18 +645,23 @@
             </div>
          </div>
 
-         <div class="flex justify-start md:justify-center items-center mt-10">
-            <p class="text-lg text-white">&copy; 2023 All rights reserved by <a class="text-t-primary"
+         <div class="socket">
+            <p class="text-lg text-t-white">&copy; 2023 All rights reserved by <a class="text-t-primary"
                   href="">EngixStudio</a></p>
          </div>
       </div>
 
 
-   </Footer>
+   </footer>
 
+
+   <!-- Jquery Js  -->
+   <script src="vendor/js/jQuery.min.js"></script>
+   <!-- Swiper JS -->
+   <script src="vendor/js/swiper.js"></script>
    <!-- Custom JS -->
-
    <script src="src/js/header.js"></script>
+   <script src="src/js/main.js"></script>
 
 </body>
 

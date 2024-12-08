@@ -18,12 +18,26 @@ module.exports = {
 
         't-primary': '#75f',
         't-black': '#070709',
+        't-black-2': '#111827',
         't-white': '#FFFFFF',
         't-gray': '#A0A0A0',
+        't-gray-2': '#9A9A98',
+
+        'bg-primary': '#F5F1EE',
+        'bg-secondary': '#EDC0F0',
+        'bg-tertiary': '#E7D8FF',
+        'bg-quaternary': '#FFD9D9',
       },
       fontFamily: {
         'FontAwesome': ['FontAwesome'],
-      }
+        'Playfair': ['Playfair Display', 'serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
+        'Jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+      },
+      boxShadow: {
+        '3xl': '0 10px 10 30px rgba(0, 0, 0, 1)',
+      },
+
     },
     container: {
       center: true,
