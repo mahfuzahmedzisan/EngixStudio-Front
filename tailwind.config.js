@@ -38,7 +38,20 @@ module.exports = {
       boxShadow: {
         '3xl': '0 10px 10 30px rgba(0, 0, 0, 1)',
       },
-
+      animation: {
+        'slide-in': 'slide-in 0.5s ease-out forwards',
+        'slide-out': 'slide-out 0.5s ease-in forwards',
+      },
+      keyframes: {
+        'slide-in': {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        'slide-out': {
+          '0%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(-100%)', opacity: '0' },
+        },
+      },
     },
     container: {
       center: true,

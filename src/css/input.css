@@ -482,4 +482,51 @@
   .service-section .card a {
     @apply text-t-primary mt-3 w-10 h-10 rounded-full border border-t-primary flex items-center justify-center transition-all duration-300 hover:bg-t-primary hover:text-t-white;
   }
+
+  /* Testimonials Section  */
+  .testimonial-section {
+    @apply py-12;
+    background-image: url('../images/bg-map.svg')
+  }
+
+  .testimonial-section .cards {
+    @apply grid grid-cols-1 gap-8;
+  }
+
+  .testimonial-section .testimonial {
+    @apply px-4 text-center;
+  }
+
+  .testimonial-section .main-content {
+    @apply flex flex-col items-center;
+  }
+
+  .testimonial-section .icon {
+    @apply w-10 h-8 sm:w-14 sm:h-10 bg-center bg-no-repeat mb-6 sm:mb-8;
+    background-image: url('../images/icon-quote.svg');
+  }
+
+  .testimonial-section .desc {
+    @apply text-lg sm:text-xl md:text-2xl text-t-black-2/80 font-medium max-w-xl mb-4 sm:mb-6;
+  }
+
+  .testimonial-section .author {
+    @apply text-xs sm:text-sm text-t-gray-2;
+  }
+
+  .testimonial-section .avatars {
+    @apply flex justify-center gap-4 mt-6 sm:mt-8;
+  }
+
+  .testimonial-section .testimonial-img {
+    @apply cursor-pointer w-16 h-16 sm:w-20 sm:h-20 scale-90 rounded-full overflow-hidden border-2 border-t-gray-2/80 transition-all duration-500;
+  }
+
+  .testimonial-section .testimonial-img img {
+    @apply w-full h-full object-cover;
+  }
+  .testimonial-section .testimonial-img.active {
+    @apply border-t-primary scale-110;
+
+  }
 }
