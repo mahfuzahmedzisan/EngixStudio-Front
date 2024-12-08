@@ -18,6 +18,7 @@ module.exports = {
 
         't-primary': '#75f',
         't-black': '#070709',
+        't-black-2': '#111827',
         't-white': '#FFFFFF',
         't-gray': '#A0A0A0',
         't-gray-2': '#9A9A98',

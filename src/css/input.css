@@ -1,4 +1,4 @@
-@import url('../../vendor/css/fonts.css');
+@import url("../../vendor/css/fonts.css");
 
 @tailwind base;
 @tailwind components;
@@ -38,7 +38,7 @@
   }
 
   .hire-btn:hover {
-    @apply border-t-black bg-t-primary text-white;
+    @apply border-t-black bg-t-primary text-t-white;
   }
 
   .footer-nav {
@@ -52,7 +52,7 @@
   /* Hero Content  */
   .hero-bg {
     @apply absolute w-full xl:w-auto xl:inset-x-10 h-full lg:h-[90%] -z-10 bg-cover bg-center xl:my-5 pb-10 rounded-3xl;
-    background-image: url('../images/hero-bg.png');
+    background-image: url("../images/hero-bg.png");
   }
 
   .hero-section {
@@ -106,13 +106,12 @@
   }
 
   .intro #videoControlBtn {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 w-16 h-16 rounded-full transition-all duration-500 text-white hover:bg-opacity-70 group-hover:opacity-100 transform scale-100 group-hover:scale-110;
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 w-16 h-16 rounded-full transition-all duration-500 text-t-white hover:bg-opacity-70 group-hover:opacity-100 transform scale-100 group-hover:scale-110;
   }
 
   .intro #playIcon {
     @apply w-full h-full flex items-center justify-center text-3xl;
   }
-
 
   /* +++++++++++++++++++++ Award Section +++++++++++++++++++++  */
   .award-section .award-cards {
@@ -130,8 +129,6 @@
   .award-section .card .award-on {
     @apply text-base text-center text-t-gray;
   }
-
-
 
   /* +++++++++++++++++++++ Work Section +++++++++++++++++++++  */
   .work-section {
@@ -163,7 +160,7 @@
   }
 
   .work-section .work-card {
-    @apply bg-black text-t-white rounded-lg overflow-hidden shadow-lg flex gap-16;
+    @apply text-t-white rounded-lg overflow-hidden shadow-lg flex gap-16;
   }
 
   .work-section .work-card .image {
@@ -199,5 +196,70 @@
   }
   .work-section .work-card .view {
     @apply text-t-primary mt-4 inline-block;
+  }
+
+  /* Why us Section */
+
+  .why-us-section {
+    @apply bg-t-primary xl:mx-10 xl:my-5 xl:rounded-3xl py-20;
+  }
+
+  .why-us-section .titles {
+    @apply flex flex-col justify-between items-center mb-28 gap-5;
+  }
+
+  .why-us-section .titles h4 {
+    @apply text-t-black text-xl font-semibold;
+  }
+
+  .why-us-section .titles h2 {
+    @apply text-3xl lg:text-5xl font-extrabold text-t-white font-Jakarta mt-5 leading-snug max-w-xl text-center;
+  }
+
+  .why-us-section .titles p {
+    @apply text-t-white/80 text-lg max-w-xl text-center;
+  }
+  
+  .why-us-section .card-group {
+    @apply flex relative gap-5 mx-auto;
+  }
+
+  .why-us-section .card-group .card-lg {
+    @apply flex flex-wrap items-start bg-t-white rounded-[30px] p-10 w-full lg:w-7/12;
+  }
+
+  .why-us-section .card-group .card-sm {
+    @apply flex flex-wrap items-start bg-t-white rounded-[30px] p-10 w-full lg:w-5/12;
+  }
+
+  .why-us-section .card-group .count {
+    @apply absolute bg-t-black w-12 h-16 text-t-white text-2xl rounded-[30px] transform rotate-45 z-10 flex items-center justify-center;
+  }
+
+  .why-us-section .card-group .card-sm .count {
+    @apply relative;
+  }
+
+  .why-us-section .card-group .count span {
+    @apply transform -rotate-45;
+  }
+
+  .why-us-section .card-group .image {
+    @apply mb-10 text-right;
+  }
+  .why-us-section .card-group .card-sm .image {
+    @apply mb-0 mt-10;
+  }
+
+  .why-us-section .card-group img {
+    @apply w-full h-auto;
+  }
+
+  .why-us-section .card-group .title {
+    @apply text-3xl mb-4 leading-10 font-semibold;
+  }
+
+  .why-us-section .card-group .desc {
+    @apply text-t-black-2 text-base mb-0;
   }
 }
