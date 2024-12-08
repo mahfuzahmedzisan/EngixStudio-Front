@@ -20,9 +20,9 @@
 
 </head>
 
-<body class="">
+<body>
    <!-- First Header -->
-   <header style="z-index: 9999999;" id="first-navbar" class="fixed w-full top-5 left-0 right-0 ; navbar-show">
+   <header id="first-navbar" class="navbar-show">
       <div class="container">
          <div class="navbar py-2">
             <div class="navbar-start">
@@ -51,8 +51,7 @@
    </header>
 
    <!-- Second Header -->
-   <header style="z-index: 9999999;" id="second-navbar"
-      class="fixed w-full top-0 left-0 right-0; navbar-hide backdrop-blur-sm shadow-md shadow-gray-300 bg-white/40">
+   <header id="second-navbar" class="navbar-hide">
       <div class="container">
          <div class="navbar">
             <div class="navbar-start">
@@ -81,16 +80,14 @@
    </header>
 
    <!-- Sidebar -->
-   <div style="z-index: 9999999;"
-      class="sidebar fixed top-0 right-0 h-screen w-2/3 translate-x-full transition-all duration-300 ease-in-out bg-white shadow-lg shadow-gray-300">
+   <div class="sidebar">
 
-      <div class="flex justify-between items-center p-4 border-b">
+      <div class="sidebar-btn flex p-4">
          <a href="" class="">
-            <img class="w-3/4" src="src/images/Logo(Border).png" alt="">
+            <img class="w-full sm:w-3/4" src="src/images/Logo(Border).png" alt="">
          </a>
          <button class="closeSidebar">
-            <i
-               class="fa-solid fa-xmark w-10 h-10 flex items-center justify-center bg-c-primary rounded-full text-t-white"></i>
+            <i class="fa-solid fa-xmark"></i>
          </button>
       </div>
       <ul class="menu p-0 pt-6">
@@ -102,98 +99,6 @@
    </div>
 
    <main>
-
-
-      <!-- Hero Section -->
-      <!-- <section>
-         <div
-            class="bg-cover bg-center xl:mx-10 xl:my-5 pt-32 pb-10 min-h-screen flex flex-col justify-center gap-28 items-center"
-            style="background-image: url(src/images/hero-bg.png);">
-
-            <div class="container">
-               <div class="w-3/4 mx-auto">
-                  <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-t-black font-Playfair">
-                     "Turning Your Vision <br class="hidden sm:block mt-5"> into Reality"
-                     <span class="block text-2xl md:text-3xl lg:text-4xl mt-5">Innovative Design, Seamless
-                        Experiences.</span>
-                  </h1>
-
-                  <p class="text-center text-t-black py-12 md:px-16 text-lg lg:text-xl leading-8">
-                     Embrace simplicity with innovative, user-friendly solutions. From smart design to impactful
-                     results, we turn ideas into reality.
-                  </p>
-
-                  <div class="text-center">
-                     <a href="contact.html"
-                        class="inline-block px-8 py-4 font-bold text-xl hover:bg-t-black transition-all duration-500 rounded-full bg-t-primary text-t-white relative">
-                        Contact Us
-                        <span class="absolute top-0 right-full w-16 xs:w-24 h-auto animate-bounce">
-                           <img src="src/images/animate.png" alt="">
-                        </span>
-                     </a>
-                  </div>
-               </div>
-            </div>
-
-           
-            <div
-               class="brands w-full p-5 backdrop-blur-md shadow-md shadow-gray-400 mx-auto px-5 md:px-10 xl:rounded-md xl:px-20 bg-t-black/5">
-               <div class="swiper">
-                  <div class="swiper-wrapper ease-linear">
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-1.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-2.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-3.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-4.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-5.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-6.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-7.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-8.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/Brands/brand-inner-9.png" alt="Brand"></a>
-                     </div>
-                     <div class="swiper-slide">
-                        <a href=""><img src="src/images/hero-bg.png" alt="Brand"></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section> -->
-
-      <!-- Intro Section -->
-
-      <!-- <section class="relative" id="intro">
-
-         <div class="container mx-auto py-10 relative z-10">
-            <div class="relative w-3/4 mx-auto rounded-xl overflow-hidden shadow-lg group">
-          
-               <video id="introVideo" src="src/videos/Design Monks Intro_FHD_DOWNLOAD.mp4" class="" muted loop></video>
-
-               <button id="videoControlBtn"
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 w-16 h-16 rounded-full text-t-white hover:bg-opacity-70 transition-all duration-500 opacity-0 group-hover:opacity-100 transform scale-100 group-hover:scale-110">
-        
-                  <i id="playIcon" class="fas fa-play w-full h-full flex items-center justify-center text-3xl"></i>
-               </button>
-            </div>
-         </div>
-      </section> -->
-
 
       <!-- +++++++++++++++++++++  Hero & Intro Section   +++++++++++++++++++++ -->
 
@@ -651,30 +556,28 @@
 
 
    <!-- Footer Section  -->
-   <Footer class="py-10 bg-black xl:mx-10 xl:my-5 xl:rounded-3xl">
+   <footer>
 
       <div class="container">
 
          <!-- Newsletter Section -->
          <div class="flex">
             <div class="w-full text-t-white">
-               <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-                  <div class="w-full md:w-auto text-center md:text-left">
-                     <h2 class="text-2xl md:text-3xl font-semibold">
+               <div class="newsletter">
+                  <div class="title">
+                     <h2>
                         Get Our Latest News <br class="hidden md:block" /> & Updates
                      </h2>
                   </div>
 
                   <!-- Newsletter Form -->
-                  <form class="flex items-center w-full max-w-lg bg-white rounded-full shadow-md overflow-hidden">
+                  <form>
 
-                     <div class="flex items-center px-1 md:px-4 m-1">
-                        <i class="fa-solid fa-envelope text-gray-500 text-lg"></i>
+                     <div class="envelope">
+                        <i class="fa-solid fa-envelope"></i>
                      </div>
-                     <input type="email" placeholder="Business email address"
-                        class="flex-1 bg-transparent text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-0 md:px-4 px-1" />
-                     <button type="submit"
-                        class="bg-c-primary text-t-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-t-primary transition-all duration-300 m-1">
+                     <input type="email" placeholder="Business email address" />
+                     <button type="submit">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                      </button>
                   </form>
@@ -682,26 +585,24 @@
             </div>
          </div>
 
-         <span
-            class="block w-1/2 h-px my-16 bg-gradient-to-r from-c-primary/30 via-t-primary to-c-secondary/30 mx-auto"></span>
+         <span class="line"></span>
 
          <!-- Footer Content -->
          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-t-white">
             <div>
                <img class="w-56" src="src/images/Logo(Border).png" alt="Logo">
-               <p class="text-lg ">
+               <p class="text-base">
                   Our highly skilled development teams <br>
                   specialized in graphic design.
                </p>
-               <div class="flex gap-3 mt-5">
-                  <a class="text-t-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-facebook-f"></i></a>
-                  <a class="text-t-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-x-twitter"></i></a>
-                  <a class="text-t-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-whatsapp"></i></a>
-                  <a class="text-t-white hover:text-t-primary group" href=""><i
-                        class="w-10 h-10 flex border group-hover:border-t-primary transition-all duration-300 border-white rounded-full items-center justify-center fa-brands fa-dribbble"></i></a>
+               <div class="socials">
+                  <a class="group" href=""><i class="group-hover:border-t-primary fa-brands fa-facebook-f"></i></a>
+                  <a class="group" href=""><i
+                        class="group-hover:border-t-primary fa-brands fa-x-twitter"></i></a>
+                  <a class="group" href=""><i
+                        class="group-hover:border-t-primary fa-brands fa-whatsapp"></i></a>
+                  <a class="group" href=""><i
+                        class="group-hover:border-t-primary fa-brands fa-dribbble"></i></a>
                </div>
             </div>
             <div class="flex flex-col">
@@ -744,14 +645,14 @@
             </div>
          </div>
 
-         <div class="flex justify-start md:justify-center items-center mt-10">
+         <div class="socket">
             <p class="text-lg text-t-white">&copy; 2023 All rights reserved by <a class="text-t-primary"
                   href="">EngixStudio</a></p>
          </div>
       </div>
 
 
-   </Footer>
+   </footer>
 
 
    <!-- Jquery Js  -->
