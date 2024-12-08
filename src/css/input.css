@@ -11,13 +11,14 @@
 
   /* ========== Headers ========== */
 
-  #first-navbar {
-    @apply fixed w-full top-5 left-0 right-0;
+  header {
+    @apply fixed w-full top-0 left-0 right-0;
   }
 
   #second-navbar {
-    @apply fixed w-full top-0 left-0 right-0 backdrop-blur-sm shadow-md shadow-gray-300 bg-white/70;
+    @apply backdrop-blur-sm shadow-sm shadow-t-white/30 bg-white/90;
   }
+
   header {
     @apply z-[99999999999];
   }
@@ -34,6 +35,10 @@
     @apply text-lg px-6 text-t-black;
   }
 
+  #first-navbar .nav-link {
+    @apply text-t-white hover:text-t-primary;
+  }
+
   header .nav-link:hover {
     @apply bg-transparent text-t-primary;
   }
@@ -41,9 +46,11 @@
   .sidebar {
     @apply fixed top-0 right-0 h-screen w-2/3 translate-x-full transition-all duration-300 ease-in-out bg-white shadow-lg shadow-gray-300 z-[99999999999];
   }
+
   .sidebar .sidebar-btn {
     @apply justify-between items-center border-b;
   }
+
   .sidebar .closeSidebar i {
     @apply w-10 h-10 flex items-center justify-center bg-c-primary rounded-full text-t-white;
   }
@@ -56,11 +63,15 @@
     @apply text-t-primary;
   }
 
-  .hire-btn {
+  .nav-btn {
     @apply border rounded-full border-t-black px-10 py-2 transition-all duration-300 ease-linear font-semibold bg-transparent text-t-black;
   }
 
-  .hire-btn:hover {
+  #first-navbar .nav-btn {
+    @apply border-t-white text-t-white;
+  }
+
+  .nav-btn:hover {
     @apply border-t-black bg-t-primary text-t-white;
   }
 
@@ -69,43 +80,56 @@
   footer {
     @apply py-10 bg-black xl:mx-10 xl:my-5 xl:rounded-3xl;
   }
+
   footer .newsletter {
     @apply flex flex-col md:flex-row items-center md:items-start justify-between gap-10;
   }
+
   footer .newsletter .title {
     @apply w-full md:w-auto text-center md:text-left;
   }
+
   footer .newsletter .title h2 {
     @apply text-2xl md:text-3xl font-semibold;
   }
+
   footer form {
     @apply flex items-center w-full max-w-lg bg-white rounded-full shadow-md overflow-hidden;
   }
+
   footer form .envelope {
     @apply flex items-center px-1 md:px-4 m-1 text-gray-500 text-lg;
   }
+
   footer form input {
     @apply flex-1 bg-transparent text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-0 md:px-4 px-1;
   }
+
   footer form button {
     @apply bg-c-primary text-t-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-t-primary transition-all duration-300 m-1;
   }
+
   footer .line {
     @apply block w-1/2 h-px my-16 bg-gradient-to-r from-c-primary/30 via-t-primary to-c-secondary/30 mx-auto;
   }
+
   footer .socials {
     @apply flex gap-3 mt-5;
   }
+
   footer .socials a {
     @apply text-t-white hover:text-t-primary;
   }
+
   footer .socials a i {
     @apply w-10 h-10 flex border transition-all duration-300 border-white rounded-full items-center justify-center;
   }
+
   .footer-nav {
     @apply py-1 text-lg text-t-white hover:text-t-primary;
   }
-  footer .socket{
+
+  footer .socket {
     @apply flex justify-start md:justify-center items-center mt-10;
   }
 
@@ -113,18 +137,22 @@
 
   /* +++++++++++++++++++++ Hero & Intro Section +++++++++++++++++++++ */
 
-  /* Hero Content  */
-  .hero-bg {
-    @apply absolute w-full xl:w-auto xl:inset-x-10 h-full lg:h-[90%] -z-10 bg-cover bg-center xl:my-5 pb-10 rounded-3xl;
-    background-image: url("../images/hero-bg.png");
+  .hero-intro-section {
+    @apply pb-16;
   }
 
+  .hero-bg {
+    @apply absolute w-full h-full lg:h-[85%] -z-10 bg-cover bg-left pb-10;
+    background-image: url("../images/bg-1.jpg");
+  }
+
+  /* Hero Content  */
   .hero-section {
     @apply w-full min-h-screen flex pt-36 flex-col justify-center gap-24 items-center;
   }
 
   .hero-section .title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center text-t-black font-Jakarta;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center text-t-white font-Jakarta;
   }
 
   .hero-section .title span {
@@ -132,20 +160,20 @@
   }
 
   .hero-section .description {
-    @apply text-center text-t-black py-12 md:px-16 text-lg lg:text-xl leading-8;
+    @apply text-center text-t-gray py-12 md:px-16 text-lg lg:text-xl leading-8;
   }
 
-  .hero-section .contact-btn {
+  .hero-section .hero-btn {
     @apply inline-block px-5 py-2 md:px-7 md:py-3 font-bold text-xl hover:bg-t-black transition-all duration-500 rounded-full bg-t-primary text-t-white relative;
   }
 
-  .hero-section .contact-btn span {
+  .hero-section .hero-btn span {
     @apply absolute top-0 right-full w-16 xs:w-24 h-auto animate-bounce;
   }
 
   /* Brand Slide Section  */
   .brands {
-    @apply w-full p-5 backdrop-blur-md shadow-md shadow-gray-400 mx-auto px-5 md:px-10 xl:px-20 bg-t-black/5;
+    @apply w-full p-5 backdrop-brightness-75 mx-auto px-5 md:px-10 xl:px-20;
   }
 
   .brands .swiper-slide {
@@ -153,16 +181,16 @@
   }
 
   .brands .swiper-slide img {
-    @apply w-44 h-auto object-cover rounded-lg;
+    @apply w-44 h-auto object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-300;
   }
 
   /* Intro Section  */
   .intro {
-    @apply relative w-full md:w-3/4 mx-auto rounded-xl overflow-hidden shadow-lg;
+    @apply mx-auto flex flex-col lg:flex-row-reverse justify-center gap-10;
   }
 
   .intro .video {
-    @apply inset-0 rounded-xl p-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500;
+    @apply inset-0 rounded-xl p-1 bg-gradient-to-r from-t-primary via-c-primary to-c-secondary;
   }
 
   .intro .video video {
@@ -175,6 +203,18 @@
 
   .intro #playIcon {
     @apply w-full h-full flex items-center justify-center text-3xl;
+  }
+
+  .intro .intro-content {
+    @apply p-10 shadow-inner border-2 rounded-3xl border-t-primary/50 bg-t-white;
+  }
+
+  .intro .intro-content h2 {
+    @apply text-2xl lg:text-4xl font-bold text-t-black font-Jakarta text-center mb-4;
+  }
+
+  .intro .intro-content p {
+    @apply text-lg text-t-black-2/80 text-justify;
   }
 
   /* +++++++++++++++++++++ Award Section +++++++++++++++++++++  */
@@ -224,19 +264,21 @@
   }
 
   .work-section .work-card {
-    @apply transition-all duration-500 ease-in-out opacity-100 max-h-screen overflow-hidden text-t-white rounded-lg shadow-lg flex gap-16; /* Initial state */
+    @apply transition-all duration-500 ease-in-out opacity-100 max-h-screen overflow-hidden text-t-white rounded-lg shadow-lg flex gap-16;
+    /* Initial state */
   }
 
   .work-section .work-card.hide {
     @apply opacity-0 max-h-0;
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
   }
+
   .work-section .work-card.hidden {
     display: none;
   }
 
   .work-section .work-card .image {
-    @apply w-full md:w-3/5 inline-block relative;
+    @apply w-full md:w-3/5 inline-block relative rounded-lg overflow-hidden;
   }
 
   .work-section .work-card .image img {
@@ -247,9 +289,9 @@
     @apply absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center transition-all duration-300;
   }
 
-  .work-section .work-card .image a span {
+  /* .work-section .work-card .image a span {
     @apply w-24 h-24 flex items-center justify-center rounded-full text-t-black bg-t-white/20 shadow-sm shadow-t-black/30 text-lg;
-  }
+  } */
 
   .work-section .work-card .content {
     @apply p-6 flex flex-col justify-between md:w-3/6;
@@ -266,18 +308,19 @@
   .work-section .work-card .content p {
     @apply text-t-gray-2 mt-4;
   }
+
   .work-section .work-card .view {
     @apply text-t-primary mt-4 inline-block;
   }
 
-  .work-section .load-more-btn {
-    @apply mt-16 py-2 px-6 bg-gradient-to-r from-t-primary via-c-primary to-c-secondary text-white font-semibold rounded-lg hover:bg-gradient-to-l hover:from-t-primary hover:via-c-primary hover:to-c-secondary transition-all duration-300;
+  .work-section .view-more {
+    @apply inline-block mt-16 py-2 px-6 bg-gradient-to-r from-t-primary via-c-primary to-c-secondary text-white font-semibold rounded-lg hover:bg-gradient-to-l hover:from-t-primary hover:via-c-primary hover:to-c-secondary transition-all duration-300;
   }
 
   /* +++++++++++++++++  Why us Section ++++++++++++++++++ */
 
   .why-us-section {
-    @apply bg-gradient-to-bl from-t-primary via-c-primary to-c-secondary xl:mx-10 xl:my-5 xl:rounded-3xl py-20;
+    @apply bg-bg-white xl:mx-10 xl:my-5 xl:rounded-3xl py-20;
   }
 
   .why-us-section .titles {
@@ -285,15 +328,15 @@
   }
 
   .why-us-section .titles h4 {
-    @apply text-t-black text-xl font-semibold;
+    @apply text-t-primary text-xl font-semibold;
   }
 
   .why-us-section .titles h2 {
-    @apply text-3xl lg:text-5xl font-extrabold text-t-white font-Jakarta mt-5 leading-snug max-w-xl text-center;
+    @apply text-3xl lg:text-5xl font-extrabold text-t-black font-Jakarta mt-5 leading-snug max-w-xl text-center;
   }
 
   .why-us-section .titles p {
-    @apply text-t-white/80 text-lg max-w-xl text-center;
+    @apply text-t-black-2/80 text-lg max-w-xl text-center;
   }
 
   .why-us-section .card-group {
@@ -323,6 +366,7 @@
   .why-us-section .card-group .image {
     @apply mb-10 text-right;
   }
+
   .why-us-section .card-group .card-sm .image {
     @apply mb-0 mt-10;
   }
@@ -361,19 +405,31 @@
     @apply text-t-black/80 text-lg max-w-xl text-center;
   }
 
-  .service-section .service-cards {
+  /* .service-section .service-cards {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;
+  } */
+
+  .service-section .service-cards .swiper {
+    @apply static;
+  }
+
+  .service-section .service-cards .swiper-button-prev {
+    @apply 2xl:left-auto 2xl:right-[105%] text-t-black;
+  }
+  .service-section .service-cards .swiper-button-next {
+    @apply 2xl:right-auto 2xl:left-[105%] text-t-black;
   }
 
   .service-section .card {
-    @apply bg-t-white rounded-3xl p-10 border hover:scale-105 shadow-lg shadow-t-gray/30 transition-all duration-300 ease-in-out;
+    @apply bg-t-white rounded-3xl p-10 border;
   }
 
   .service-section .card .icon {
     @apply w-14 h-auto text-left mb-3;
   }
+
   .service-section .card img {
-    @apply w-full h-auto;
+    @apply w-full h-auto transition-all duration-300;
   }
 
   .service-section .card h2 {
@@ -383,6 +439,7 @@
   .service-section .card p {
     @apply text-t-black-2/60;
   }
+
   .service-section .card a {
     @apply text-t-primary mt-3 w-10 h-10 rounded-full border border-t-primary flex items-center justify-center transition-all duration-300 hover:bg-t-primary hover:text-t-white;
   }

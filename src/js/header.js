@@ -31,14 +31,14 @@ window.addEventListener('scroll', () => {
    const scrollPosition = window.scrollY;
 
    // Scrolling down
-   if (scrollPosition > 150 && scrollPosition > lastScrollPosition) {
+   if (scrollPosition > 50 && scrollPosition > lastScrollPosition) {
       firstNavbar.classList.remove('navbar-show');  // Hide the first navbar
       firstNavbar.classList.add('navbar-hide');
       secondNavbar.classList.remove('navbar-hide'); // Show the second navbar
       secondNavbar.classList.add('navbar-show');
    }
    // Scrolling up
-   else if (scrollPosition < lastScrollPosition && scrollPosition <= 150) {
+   else if (scrollPosition < lastScrollPosition && scrollPosition <= 50) {
       firstNavbar.classList.remove('navbar-hide');  // Show the first navbar
       firstNavbar.classList.add('navbar-show');
       secondNavbar.classList.remove('navbar-show');
