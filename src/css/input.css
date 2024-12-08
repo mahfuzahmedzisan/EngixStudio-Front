@@ -198,10 +198,10 @@
     @apply text-t-primary mt-4 inline-block;
   }
 
-  /* Why us Section */
+  /* +++++++++++++++++  Why us Section ++++++++++++++++++ */
 
   .why-us-section {
-    @apply bg-t-primary xl:mx-10 xl:my-5 xl:rounded-3xl py-20;
+    @apply bg-gradient-to-bl from-t-primary via-c-primary to-c-secondary xl:mx-10 xl:my-5 xl:rounded-3xl py-20;
   }
 
   .why-us-section .titles {
@@ -219,7 +219,7 @@
   .why-us-section .titles p {
     @apply text-t-white/80 text-lg max-w-xl text-center;
   }
-  
+
   .why-us-section .card-group {
     @apply flex relative gap-5 mx-auto;
   }
@@ -261,5 +261,53 @@
 
   .why-us-section .card-group .desc {
     @apply text-t-black-2 text-base mb-0;
+  }
+
+  /* +++++++++++++++++++++ Service Section +++++++++++++++++ */
+
+  .service-section {
+    @apply py-20;
+  }
+
+  .service-section .title {
+    @apply flex flex-col justify-between items-center mb-28 gap-5;
+  }
+
+  .service-section .title h4 {
+    @apply text-t-primary text-xl font-semibold;
+  }
+
+  .service-section .title h2 {
+    @apply text-3xl lg:text-5xl font-extrabold text-t-black font-Jakarta mt-5 leading-snug max-w-xl text-center;
+  }
+
+  .service-section .title p {
+    @apply text-t-black/80 text-lg max-w-xl text-center;
+  }
+
+  .service-section .service-cards {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;
+  }
+
+  .service-section .card {
+    @apply bg-t-white rounded-3xl p-10 border hover:scale-105 shadow-lg shadow-t-gray/30 transition-all duration-300 ease-in-out;
+  }
+
+  .service-section .card .icon {
+    @apply w-14 h-auto text-left mb-3;
+  }
+  .service-section .card img {
+    @apply w-full h-auto;
+  }
+
+  .service-section .card h2 {
+    @apply text-2xl font-semibold mb-3 text-t-black;
+  }
+
+  .service-section .card p {
+    @apply text-t-black-2/60;
+  }
+  .service-section .card a {
+    @apply text-t-primary mt-3 w-10 h-10 rounded-full border border-t-primary flex items-center justify-center transition-all duration-300 hover:bg-t-primary hover:text-t-white;
   }
 }
