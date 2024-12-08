@@ -160,7 +160,15 @@
   }
 
   .work-section .work-card {
-    @apply text-t-white rounded-lg overflow-hidden shadow-lg flex gap-16;
+    @apply transition-all duration-500 ease-in-out opacity-100 max-h-screen overflow-hidden text-t-white rounded-lg shadow-lg flex gap-16; /* Initial state */
+  }
+
+  .work-section .work-card.hide {
+    @apply opacity-0 max-h-0;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+  }
+  .work-section .work-card.hidden {
+    display: none;
   }
 
   .work-section .work-card .image {
@@ -196,6 +204,10 @@
   }
   .work-section .work-card .view {
     @apply text-t-primary mt-4 inline-block;
+  }
+
+  .work-section .load-more-btn {
+    @apply mt-16 py-2 px-6 bg-gradient-to-r from-t-primary via-c-primary to-c-secondary text-white font-semibold rounded-lg hover:bg-gradient-to-l hover:from-t-primary hover:via-c-primary hover:to-c-secondary transition-all duration-300;
   }
 
   /* +++++++++++++++++  Why us Section ++++++++++++++++++ */

@@ -1,5 +1,5 @@
 
-// Brands Slider
+// +++++++++++++++++  Brands Slider ++++++++++++++++++
 const brandsSwiper = new Swiper('.brands .swiper', {
    slidesPerView: "auto",
    loop: true,
@@ -12,7 +12,7 @@ const brandsSwiper = new Swiper('.brands .swiper', {
    },
 });
 
-// Inro Section Video Play Button
+// ++++++++++++++++ Inro Section Video Play Button ++++++++++++++++++++
 
 const video = document.getElementById('introVideo');
 const videoControlBtn = document.getElementById('videoControlBtn');
@@ -67,38 +67,26 @@ video.addEventListener('mouseleave', () => {
 
 
 
-// Work Seciton
+// +++++++++++++ Work Seciton +++++++++++++++
 
-const caseStudiesContainer = document.getElementById("caseStudiesContainer");
-         const loadMoreBtn = document.getElementById("loadMoreBtn");
-         const loadLessBtn = document.getElementById("loadLessBtn");
-         const cards = Array.from(caseStudiesContainer.children);
+document.getElementById('toggle-cards').addEventListener('click', function () {
+   const hiddenCards = document.querySelectorAll('.work-card.hide');
+   const button = this;
 
-         const initialVisible = 2; // Show only the first two cards initially
-         let currentlyVisible = initialVisible;
+   if (hiddenCards.length > 0) {
+      // Show all hidden cards
+      hiddenCards.forEach((card) => card.classList.remove('hidden'));
+      setTimeout(() => {
+         hiddenCards.forEach((card) => card.classList.remove('hide'));
+      }, 50)
+      button.textContent = 'Load Less';
+   } else {
+      // Hide cards beyond the first 4
+      document.querySelectorAll('.work-card:nth-child(n+5)').forEach((card) => card.classList.add('hide'));
+      setTimeout(() => {
+         document.querySelectorAll('.work-card:nth-child(n+5)').forEach((card) => card.classList.add('hidden'));
+      }, 500)
+      button.textContent = 'Load More';
+   }
+});
 
-         // Update visibility
-         const updateVisibility = () => {
-            cards.forEach((card, index) => {
-               card.classList.toggle("hidden", index >= currentlyVisible);
-            });
-         };
-
-         // Show all cards
-         loadMoreBtn.addEventListener("click", () => {
-            currentlyVisible = cards.length;
-            updateVisibility();
-            loadMoreBtn.classList.add("hidden");
-            loadLessBtn.classList.remove("hidden");
-         });
-
-         // Show fewer cards
-         loadLessBtn.addEventListener("click", () => {
-            currentlyVisible = initialVisible;
-            updateVisibility();
-            loadLessBtn.classList.add("hidden");
-            loadMoreBtn.classList.remove("hidden");
-         });
-
-         // Initialize
-         updateVisibility();
