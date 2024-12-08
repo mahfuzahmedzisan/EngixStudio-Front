@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.301" height="40" viewBox="0 0 46.301 40">
+  <g id="quote_icon" data-name="quote icon" transform="translate(-8.662 20.118)">
+    <g id="left-quotes-sign" transform="translate(8.662 -20.118)">
+      <g id="Group_1470" data-name="Group 1470" transform="translate(0 0)">
+        <path id="Path_2441" data-name="Path 2441" d="M.01,63.549A11.147,11.147,0,0,0,11.279,74.571a11.024,11.024,0,1,0,0-22.044,11.452,11.452,0,0,0-3.65.6c2.536-14.226,13.878-23.4,3.364-15.849C-.665,45.653,0,63.212.011,63.534.011,63.539.01,63.543.01,63.549Z" transform="translate(0 -34.571)" fill="#5e77ff"/>
+        <path id="Path_2442" data-name="Path 2442" d="M266.071,63.549a11.271,11.271,0,1,0,11.268-11.022,11.452,11.452,0,0,0-3.65.6c2.536-14.226,13.878-23.4,3.364-15.849-11.658,8.372-11,25.932-10.982,26.253C266.071,63.539,266.071,63.543,266.071,63.549Z" transform="translate(-242.307 -34.571)" fill="#5e77ff"/>
+      </g>
+    </g>
+  </g>
+</svg>
