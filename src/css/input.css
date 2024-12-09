@@ -32,15 +32,15 @@
   }
 
   header .nav-link {
-    @apply text-lg px-6 text-t-black;
+    @apply text-lg px-6 text-t-black hover:text-t-primary hover:bg-transparent active:!bg-transparent active:!text-t-primary;
   }
 
-  header .nav-link:hover {
-    @apply bg-transparent text-t-primary;
+  .nav-link.active {
+    @apply !text-t-primary !bg-transparent;
   }
 
   .sidebar {
-    @apply fixed top-0 right-0 h-screen w-2/3 translate-x-full transition-all duration-300 ease-in-out bg-white shadow-lg shadow-gray-300 z-[99999999999];
+    @apply fixed top-0 right-0 h-screen w-2/3 translate-x-full transition-all duration-300 ease-in-out bg-white shadow-lg shadow-t-gray z-[99999999999];
   }
 
   .sidebar .sidebar-btn {
@@ -52,23 +52,15 @@
   }
 
   .sidebar .nav-link {
-    @apply text-lg px-10 text-t-black rounded-none border-b transition-colors duration-300;
+    @apply text-lg px-10 text-t-black rounded-none border-b transition-colors duration-300 hover:bg-t-gray/20 hover:text-t-primary active:!bg-t-gray/20 active:!text-t-primary;
   }
 
-  .sidebar .nav-link:hover {
-    @apply text-t-primary;
+  .sidebar .nav-link.active {
+    @apply !bg-t-gray/20 !text-t-primary;
   }
 
   .nav-btn {
-    @apply border rounded-full border-t-black px-10 py-2 transition-all duration-300 ease-linear font-semibold bg-transparent text-t-black;
-  }
-
-  #first-navbar .nav-btn {
-    @apply border-t-white text-t-white;
-  }
-
-  .nav-btn:hover {
-    @apply border-t-black bg-t-primary text-t-white;
+    @apply border rounded-full border-t-black px-10 py-2 transition-all duration-300 ease-linear font-semibold bg-transparent text-t-black hover:border-t-primary hover:bg-t-primary hover:text-t-white;
   }
 
   /* ========== Footer ==========  */
@@ -520,6 +512,7 @@
   .testimonial-section .testimonial-img img {
     @apply w-full h-full object-cover;
   }
+
   .testimonial-section .testimonial-img.active {
     @apply border-t-primary scale-110;
   }
@@ -556,7 +549,7 @@
   /* Filter Items  */
 
   .case-study .filters-items {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-10 mt-20;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 mt-20;
   }
 
   .case-study .filter-item {
@@ -566,6 +559,7 @@
   .case-study .filter-item .image {
     @apply w-full h-auto rounded-[50px] overflow-hidden relative;
   }
+
   .case-study .filter-item .image img {
     @apply w-full h-full object-cover;
   }
@@ -595,7 +589,7 @@
   }
 
   /* Site Contact Section */
-  .site-contact-section .site-contact-section {
+  .site-contact-section {
     @apply py-16;
   }
 

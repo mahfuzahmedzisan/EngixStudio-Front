@@ -22,30 +22,29 @@
 
 <body>
   <!-- First Header -->
-  <!-- First Header -->
   <header id="first-navbar" class="navbar-show">
     <div class="container">
       <div class="navbar py-2">
         <div class="navbar-start">
-          <a href="" class="text-xl">
+          <a href="/index.html" class="text-xl">
             <img class="w-52" src="src/images/Logo(Border).png" alt="">
           </a>
         </div>
 
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a class="nav-link" href="/index.html">About</a></li>
-            <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+            <li><a class="nav-link" href="/about.html">About</a></li>
+            <li><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
             <li><a class="nav-link" href="/blog.html">Blog</a></li>
             <li><a class="nav-link" href="/contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div class="navbar-end">
-          <button class="openSidebar lg:hidden text-2xl text-t-white">
+          <button class="openSidebar lg:hidden text-2xl">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <a href="/contact.html" class="nav-btn btn hidden lg:inline-flex">Contact Us</a>
+          <a href="/contact.html" class="nav-btn hidden lg:inline-flex">Contact Us</a>
         </div>
       </div>
     </div>
@@ -56,15 +55,15 @@
     <div class="container">
       <div class="navbar">
         <div class="navbar-start">
-          <a href="" class="text-xl">
+          <a href="/index.html" class="text-xl">
             <img class="w-52" src="src/images/Logo(Border).png" alt="">
           </a>
         </div>
 
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a class="nav-link" href="/index.html">About</a></li>
-            <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+            <li><a class="nav-link" href="/about.html">About</a></li>
+            <li><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
             <li><a class="nav-link" href="/blog.html">Blog</a></li>
             <li><a class="nav-link" href="/contact.html">Contact</a></li>
           </ul>
@@ -74,7 +73,7 @@
           <button class="lg:hidden openSidebar text-2xl">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <a href="/contact.html" class="nav-btn btn hidden lg:inline-flex">Contact Us</a>
+          <a href="/contact.html" class="nav-btn hidden lg:inline-flex">Contact Us</a>
         </div>
       </div>
     </div>
@@ -84,7 +83,7 @@
   <div class="sidebar">
 
     <div class="sidebar-btn flex p-4">
-      <a href="" class="">
+      <a href="/index.html">
         <img class="w-full sm:w-3/4" src="src/images/Logo(Border).png" alt="">
       </a>
       <button class="closeSidebar">
@@ -92,8 +91,8 @@
       </button>
     </div>
     <ul class="menu p-0 pt-6">
-      <li><a class="nav-link" href="/index.html">About</a></li>
-      <li><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+      <li><a class="nav-link" href="/about.html">About</a></li>
+      <li><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
       <li><a class="nav-link" href="/blog.html">Blog</a></li>
       <li><a class="nav-link" href="/contact.html">Contact</a></li>
     </ul>
@@ -102,7 +101,7 @@
   <main>
 
     <!-- Case Study Seciton  -->
-    <section class="case-study pb-16 pt-48 bg-bg-white">
+    <section class="case-study pb-16 pt-32 lg:pt-48 bg-bg-white">
       <div class="container">
         <div class="title text-center mb-20">
           <h4 class="text-xl text-t-primary capitalize mb-8">Case Studies</h4>
@@ -334,7 +333,7 @@
     </section>
 
     <style>
-      
+
     </style>
 
 
@@ -375,7 +374,9 @@
       <!-- Footer Content -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-t-white">
         <div>
-          <img class="w-56" src="src/images/Logo(Border).png" alt="Logo">
+          <a href="/index.html">
+            <img class="w-56" src="src/images/Logo(Border).png" alt="Logo">
+          </a>
           <p class="text-base">
             Our highly skilled development teams <br>
             specialized in graphic design.
@@ -394,7 +395,7 @@
         <div class="flex flex-col">
           <h4 class="text-3xl font-semibold mb-3">Pages</h4>
           <ul>
-            <li class="footer-nav"><a href="/index.html">About</a></li>
+            <li class="footer-nav"><a href="/about.html">About</a></li>
             <li class="footer-nav"><a href="/portfolio.html">Portfolio</a></li>
             <li class="footer-nav"><a href="/blog.html">Blog</a></li>
             <li class="footer-nav"><a href="/contact.html">Contact</a></li>
@@ -404,13 +405,13 @@
           <h4 class="text-3xl font-semibold mb-3">Services</h4>
           <ul>
             <li class="footer-nav">
-              <a href="">UI UX Design</a>
+              <a href="javascript:void(0)">UI UX Design</a>
             </li>
             <li class="footer-nav">
-              <a href="">Web Design</a>
+              <a href="javascript:void(0)">Web Design</a>
             </li>
             <li class="footer-nav">
-              <a href="">Branding</a>
+              <a href="javascript:void(0)">Branding</a>
             </li>
           </ul>
         </div>
@@ -436,10 +437,7 @@
             href="/index.html">EngixStudio</a></p>
       </div>
     </div>
-
-
   </footer>
-
 
   <!-- Jquery Js  -->
   <script src="/vendor/js/jQuery.min.js" type="module"></script>
