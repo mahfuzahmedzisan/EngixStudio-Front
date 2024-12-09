@@ -275,12 +275,12 @@
     @apply p-6 flex flex-col justify-between md:w-3/6;
   }
 
-  .work-section .work-card .author {
-    @apply text-t-primary font-semibold text-sm;
+  .work-section .work-card .tags span {
+    @apply text-t-white text-sm px-4 py-2 rounded-full bg-t-primary/20 inline-block hover:text-t-primary transition-all duration-300;
   }
 
   .work-section .work-card .title {
-    @apply text-xl lg:text-3xl font-bold mt-2 hover:text-t-primary transition-all duration-300;
+    @apply text-xl lg:text-3xl font-bold mt-2 hover:text-t-primary transition-all duration-300 leading-9;
   }
 
   .work-section .work-card .content p {
@@ -534,15 +534,15 @@
   }
 
   .case-study .filter-options .filter-btn {
-    @apply inline-block transition-all duration-300 bg-gray-100 text-gray-700 rounded-full px-4 py-2;
+    @apply inline-block transition-all duration-300 bg-t-black/5 text-t-gray rounded-full px-4 py-2 hover:text-t-white hover:bg-t-primary;
   }
 
   .case-study .filter-options .filter-btn-active {
-    @apply bg-blue-500 text-white;
+    @apply bg-t-primary text-t-white;
   }
 
   .case-study .filter-options .swiper-button {
-    @apply absolute w-10 h-10 rounded-full flex justify-center items-center text-3xl bg-gray-200 text-gray-700 shadow-md after:content-[''];
+    @apply absolute w-10 h-10 rounded-full flex justify-center items-center text-3xl bg-t-white text-t-primary shadow-md after:content-[''];
   }
 
   .case-study .filter-options .swiper-button-prev {
@@ -552,4 +552,46 @@
   .case-study .filter-options .swiper-button-next {
     @apply top-[55%] right-0;
   }
+
+  /* Filter Items  */
+
+  .case-study .filters-items {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-10 mt-20;
+  }
+
+  .case-study .filter-item {
+    @apply flex flex-col transition-all duration-300 ease-out;
+  }
+
+  .case-study .filter-item .image {
+    @apply w-full h-auto rounded-[50px] overflow-hidden relative;
+  }
+  .case-study .filter-item .image img {
+    @apply w-full h-full object-cover;
+  }
+
+  .case-study .filter-item .image a {
+    @apply absolute w-full h-full top-0 left-0;
+  }
+
+  .case-study .filter-item .content {
+    @apply p-6;
+  }
+
+  .case-study .filter-item .title {
+    @apply text-xl lg:text-3xl font-bold mt-2 hover:text-t-primary transition-all duration-300 leading-9;
+  }
+
+  .case-study .filter-item .desc {
+    @apply text-t-black-2 my-5;
+  }
+
+  .case-study .filter-item .tags {
+    @apply flex gap-3 flex-wrap;
+  }
+
+  .case-study .filter-item .tag {
+    @apply text-t-primary text-sm px-4 py-2 rounded-full bg-t-primary/20;
+  }
+
 }
