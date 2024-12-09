@@ -594,4 +594,68 @@
     @apply text-t-primary text-sm px-4 py-2 rounded-full bg-t-primary/20;
   }
 
+  /* Site Contact Section */
+  .site-contact-section .site-contact-section {
+    @apply py-16;
+  }
+
+  .site-contact-section .grid-layout {
+    @apply grid grid-cols-1 xl:grid-cols-3 gap-10;
+  }
+
+  .site-contact-section .main-content {
+    @apply col-span-1 xl:col-span-2 flex flex-col-reverse items-center md:grid md:grid-cols-3 bg-t-black rounded-3xl p-10;
+  }
+
+  .site-contact-section .heading-section {
+    @apply col-span-2;
+  }
+
+  .site-contact-section .title {
+    @apply text-xl text-t-primary font-mono;
+  }
+
+  .site-contact-section .subtitle {
+    @apply text-5xl font-black text-t-white font-Jakarta mt-10;
+  }
+
+  .site-contact-section .button {
+    @apply inline-block mt-20 bg-t-primary text-t-white font-semibold py-3 px-6 rounded-full text-xl hover:bg-transparent transition-all duration-300;
+  }
+
+  .site-contact-section .image {
+    @apply max-w-52 flex justify-center items-center;
+  }
+
+  .site-contact-section .image {
+    @apply w-full h-auto;
+  }
+
+  /* side-content Section */
+  .site-contact-section .side-content {
+    @apply bg-t-primary/40 rounded-3xl p-10;
+  }
+
+  .site-contact-section .icon {
+    @apply w-16 h-auto;
+  }
+
+  .site-contact-section .text-content {
+    @apply text-xl text-t-white/80 leading-8 my-5;
+  }
+
+  .site-contact-section .highlight {
+    @apply text-t-white font-semibold;
+  }
+
+  .site-contact-section .side-content a {
+    @apply sm:text-lg text-t-black sm:font-semibold bg-t-white sm:px-4 px-2 py-2 rounded-full inline-block;
+  }
+
+  .site-contact-section .social-icon {
+    @apply text-green-800 sm:text-2xl sm:ml-2;
+  }
+
+  /* ===================== End of Portfolio Page ===================== */
+
 }
