@@ -120,15 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
             activeTestimonial.classList.remove('hidden');
             activeTestimonial.classList.add('animate-slide-in');
             activeTestimonial.classList.remove('animate-slide-out');
-         }, 500); 
+         }, 500);
       }
    };
 
    avatars.forEach((avatar) => {
       avatar.addEventListener('click', () => {
          const targetId = avatar.getAttribute('data-target'); // Get the target testimonial ID
-         showTestimonial(targetId); 
-         
+         showTestimonial(targetId);
+
          avatars.forEach((thumb) => {
             thumb.classList.remove('active');
          });
@@ -138,4 +138,5 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 
 
+   
 });

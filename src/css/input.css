@@ -35,10 +35,6 @@
     @apply text-lg px-6 text-t-black;
   }
 
-  #first-navbar .nav-link {
-    @apply text-t-white hover:text-t-primary;
-  }
-
   header .nav-link:hover {
     @apply bg-transparent text-t-primary;
   }
@@ -217,7 +213,6 @@
     @apply text-lg text-t-black-2/80 text-justify;
   }
 
-
   /* +++++++++++++++++++++ Work Section +++++++++++++++++++++  */
   .work-section {
     @apply bg-t-black xl:mx-10 xl:my-5 xl:rounded-3xl py-20 text-t-white;
@@ -370,7 +365,7 @@
 
   .work-process-section {
     @apply relative py-16 bg-cover bg-left;
-    background-image: url('../images/bg-1.jpg');
+    background-image: url("../images/bg-1.jpg");
   }
 
   .work-process-section .title {
@@ -486,7 +481,7 @@
   /* Testimonials Section  */
   .testimonial-section {
     @apply py-20;
-    background-image: url('../images/bg-map.svg')
+    background-image: url("../images/bg-map.svg");
   }
 
   .testimonial-section .cards {
@@ -503,7 +498,7 @@
 
   .testimonial-section .icon {
     @apply w-10 h-8 sm:w-14 sm:h-10 bg-center bg-no-repeat mb-6 sm:mb-8;
-    background-image: url('../images/icon-quote.svg');
+    background-image: url("../images/icon-quote.svg");
   }
 
   .testimonial-section .desc {
@@ -527,6 +522,34 @@
   }
   .testimonial-section .testimonial-img.active {
     @apply border-t-primary scale-110;
+  }
 
+  /* ======================== End Of Home Page ======================== */
+  /* ======================== Start Portfolio Page ======================== */
+
+  /* Filter Options  */
+
+  .case-study .filter-options .swiper-slide {
+    @apply flex w-auto last:mr-16 first:ml-12;
+  }
+
+  .case-study .filter-options .filter-btn {
+    @apply inline-block transition-all duration-300 bg-gray-100 text-gray-700 rounded-full px-4 py-2;
+  }
+
+  .case-study .filter-options .filter-btn-active {
+    @apply bg-blue-500 text-white;
+  }
+
+  .case-study .filter-options .swiper-button {
+    @apply absolute w-10 h-10 rounded-full flex justify-center items-center text-3xl bg-gray-200 text-gray-700 shadow-md after:content-[''];
+  }
+
+  .case-study .filter-options .swiper-button-prev {
+    @apply top-[55%] left-0;
+  }
+
+  .case-study .filter-options .swiper-button-next {
+    @apply top-[55%] right-0;
   }
 }
