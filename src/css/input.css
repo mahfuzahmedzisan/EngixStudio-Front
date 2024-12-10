@@ -679,6 +679,47 @@
     @apply mt-2 text-t-gray;
   }
 
+  /* Faq Section */
+  .faq-section {
+    @apply py-20;
+  }
+
+  .faq-section .title {
+    @apply text-center my-16;
+  }
+
+  .faq-section .title h4 {
+    @apply text-t-primary text-xl mb-10;
+  }
+
+  .faq-section .title h2 {
+    @apply text-t-black font-black font-Jakarta text-xl lg:text-2xl;
+  }
+
+  .faq-section .accordions {
+    @apply flex flex-col gap-5 md:w-3/4 mx-auto;
+  }
+
+  .faq-section .faq-item {
+    @apply bg-t-primary/20 rounded-2xl px-5 transition-all duration-300;
+  }
+
+  .faq-section .faq-question {
+    @apply my-5 flex items-center justify-between gap-10 cursor-pointer;
+  }
+
+  .faq-section .faq-question button {
+    @apply text-2xl font-bold font-Jakarta;
+  }
+
+  .faq-section .faq-icon {
+    @apply text-t-primary;
+  }
+
+  .faq-section .faq-answer {
+    @apply overflow-hidden max-h-0 py-0 transition-all duration-300 text-t-black/50;
+  }
+
   /* ======================== End Of About Page ======================== */
 
   /* ======================== Start Portfolio Page ======================== */
