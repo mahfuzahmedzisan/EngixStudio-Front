@@ -518,9 +518,177 @@
   }
 
   /* ======================== End Of Home Page ======================== */
+
+  /* ======================== Start About Page ======================== */
+
+  /* About Page Hero Section  */
+  .about-hero-section {
+    @apply pb-16 pt-32 lg:pt-40 bg-cover bg-center;
+    background-image: url("src/images/banner-bg.png.bv.webp");
+  }
+
+  .about-hero-section .title {
+    @apply text-center mb-16;
+  }
+
+  .about-hero-section .heading {
+    @apply text-3xl lg:text-6xl font-black font-Jakarta text-t-black-2;
+  }
+
+  .about-hero-section .image {
+    @apply w-full rounded-3xl overflow-hidden;
+  }
+
+  .about-hero-section .image img {
+    @apply w-full h-auto object-cover;
+  }
+
+  /* Slogan Section  */
+  .slogan-seciton {
+    @apply py-16;
+  }
+
+  .slogan-seciton .text-box {
+    @apply text-center px-5 lg:px-20 pb-24;
+  }
+
+  .slogan-seciton .decoration-left {
+    @apply absolute -top-9 -left-7 -z-10;
+  }
+
+  .slogan-seciton .decoration-right {
+    @apply absolute -bottom-7 -right-5 -z-10;
+  }
+
+  .slogan-seciton .slogan {
+    @apply text-t-black-2 text-xl lg:text-3xl font-bold font-Jakarta leading-8 tracking-wide;
+  }
+
+  .slogan-seciton .content-box {
+    @apply flex flex-col lg:flex-row gap-10 items-center;
+  }
+
+  .slogan-seciton .image {
+    @apply w-full lg:w-2/5;
+  }
+
+  .slogan-seciton .image img {
+    @apply w-full h-auto object-cover;
+  }
+
+  .slogan-seciton .content {
+    @apply w-full lg:w-3/5 gap-10 p-5;
+  }
+
+  .slogan-seciton .title {
+    @apply text-2xl sm:text-4xl lg:text-5xl font-black font-Jakarta text-t-black-2 mb-10;
+  }
+
+  .slogan-seciton .text {
+    @apply text-lg my-5 text-t-black/50 pl-8 relative;
+  }
+
+  .slogan-seciton .icon {
+    @apply text-t-primary absolute top-2 left-0;
+  }
+
+  /* Story Section  */
+
+  .story-section {
+    @apply py-16;
+  }
+
+  .story-section .title {
+    @apply text-center mb-12;
+  }
+
+  .story-section .title h4 {
+    @apply text-lg font-medium text-t-primary uppercase mb-10;
+  }
+
+  .story-section .title h2 {
+    @apply text-3xl sm:text-5xl lg:text-6xl font-Jakarta font-bold text-t-black-2 w-full max-w-3xl mx-auto;
+  }
+
+  .story-section .flex-container {
+    @apply flex flex-col lg:flex-row items-center gap-10;
+  }
+
+  .story-section .image {
+    @apply w-full lg:w-1/2;
+  }
+
+  .story-section .image img {
+    @apply rounded-3xl w-full h-auto object-cover;
+  }
+
+  .story-section .content {
+    @apply w-full lg:w-1/2;
+  }
+
+  .story-section .content p {
+    @apply text-lg text-t-black-2 mb-6;
+  }
+
+  .story-section .content p:last-child {
+    @apply mb-0;
+  }
+
+  .story-section .content strong {
+    @apply text-t-primary;
+  }
+
+  /* Member Section */
+  .member-section {
+    @apply py-16 bg-t-black-2 xl:mx-10 xl:mt-5 xl:rounded-3xl;
+  }
+
+  .member-section .title {
+    @apply mb-20;
+  }
+
+  .member-section h4 {
+    @apply text-t-primary text-xl font-semibold mb-5;
+  }
+
+  .member-section h2 {
+    @apply text-2xl sm:text-4xl lg:text-5xl text-t-white lg:w-3/4 font-Jakarta font-black;
+  }
+
+  .member-section .members-group {
+    @apply grid grid-cols-1 2xs:grid-cols-2 md:grid-cols-3 gap-8;
+  }
+
+  .member-section .member {
+    @apply text-center text-white;
+  }
+
+  .member-section .member .image {
+    @apply rounded-xl overflow-hidden;
+  }
+
+  .member-section .member .member-image {
+    @apply w-full h-auto object-cover;
+  }
+
+  .member-section .member .name {
+    @apply mt-6 text-xl font-bold;
+  }
+
+  .member-section .member .position {
+    @apply mt-2 text-t-gray;
+  }
+
+  /* ======================== End Of About Page ======================== */
+
   /* ======================== Start Portfolio Page ======================== */
 
   /* Filter Options  */
+
+  .case-study {
+    @apply pb-16 pt-32 lg:pt-40 bg-cover bg-center;
+    background-image: url("../images/banner-bg.png.bv.webp");
+  }
 
   .case-study .filter-options .swiper-slide {
     @apply flex w-auto last:mr-16 first:ml-12;
@@ -651,5 +819,4 @@
   }
 
   /* ===================== End of Portfolio Page ===================== */
-
 }
