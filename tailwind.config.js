@@ -42,6 +42,9 @@ module.exports = {
       animation: {
         'slide-in': 'slide-in 0.5s ease-out forwards',
         'slide-out': 'slide-out 0.5s ease-in forwards',
+        'fade-up': 'fade-up 0.5s ease-out forwards',
+        'fade-down': 'fade-down 0.5s ease-in forwards',
+
       },
       keyframes: {
         'slide-in': {
@@ -51,6 +54,14 @@ module.exports = {
         'slide-out': {
           '0%': { transform: 'translateX(0)', opacity: '1' },
           '100%': { transform: 'translateX(-100%)', opacity: '0' },
+        },
+        'fade-up': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-10px)' },
+        },
+        'fade-down': {
+          '0%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
         },
       },
     },

@@ -129,79 +129,79 @@
     @apply pb-16;
   }
 
-  .hero-bg {
+  .hero-intro-section .hero-bg {
     @apply absolute w-full h-full lg:h-[85%] -z-10 bg-cover bg-left pb-10;
     background-image: url("../images/bg-1.jpg");
   }
 
   /* Hero Content  */
-  .hero-section {
+  .hero-intro-section .hero-section {
     @apply w-full min-h-screen flex pt-36 flex-col justify-center gap-24 items-center;
   }
 
-  .hero-section .title {
+  .hero-intro-section .hero-section .title {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center text-t-white font-Jakarta;
   }
 
-  .hero-section .title span {
+  .hero-intro-section .hero-section .title span {
     @apply block text-2xl md:text-3xl lg:text-4xl mt-5;
   }
 
-  .hero-section .description {
+  .hero-intro-section .hero-section .description {
     @apply text-center text-t-gray py-12 md:px-16 text-lg lg:text-xl leading-8;
   }
 
-  .hero-section .hero-btn {
+  .hero-intro-section .hero-section .hero-btn {
     @apply inline-block px-5 py-2 md:px-7 md:py-3 font-bold text-xl hover:bg-t-black transition-all duration-500 rounded-full bg-t-primary text-t-white relative;
   }
 
-  .hero-section .hero-btn span {
+  .hero-intro-section .hero-section .hero-btn span {
     @apply absolute top-0 right-full w-16 xs:w-24 h-auto animate-bounce;
   }
 
   /* Brand Slide Section  */
-  .brands {
+  .hero-intro-section .brands {
     @apply w-full p-5 backdrop-brightness-75 mx-auto px-5 md:px-10 xl:px-20;
   }
 
-  .brands .swiper-slide {
+  .hero-intro-section .brands .swiper-slide {
     @apply flex w-auto px-10;
   }
 
-  .brands .swiper-slide img {
+  .hero-intro-section .brands .swiper-slide img {
     @apply w-44 h-auto object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-300;
   }
 
   /* Intro Section  */
-  .intro {
+  .hero-intro-section .intro {
     @apply mx-auto flex flex-col lg:flex-row-reverse justify-center gap-10;
   }
 
-  .intro .video {
+  .hero-intro-section .intro .video {
     @apply inset-0 rounded-xl p-1 bg-gradient-to-r from-t-primary via-c-primary to-c-secondary;
   }
 
-  .intro .video video {
+  .hero-intro-section .intro .video video {
     @apply w-full h-auto object-cover rounded-lg;
   }
 
-  .intro #videoControlBtn {
+  .hero-intro-section .intro #videoControlBtn {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 w-16 h-16 rounded-full transition-all duration-500 text-t-white hover:bg-opacity-70 group-hover:opacity-100 transform scale-100 group-hover:scale-110;
   }
 
-  .intro #playIcon {
+  .hero-intro-section .intro #playIcon {
     @apply w-full h-full flex items-center justify-center text-3xl;
   }
 
-  .intro .intro-content {
+  .hero-intro-section .intro .intro-content {
     @apply p-10 shadow-inner border-2 rounded-3xl border-t-primary/50 bg-t-white;
   }
 
-  .intro .intro-content h2 {
+  .hero-intro-section .intro .intro-content h2 {
     @apply text-2xl lg:text-4xl font-bold text-t-black font-Jakarta text-center mb-4;
   }
 
-  .intro .intro-content p {
+  .hero-intro-section .intro .intro-content p {
     @apply text-lg text-t-black-2/80 text-justify;
   }
 
@@ -543,59 +543,92 @@
     @apply w-full h-auto object-cover;
   }
 
-  /* Slogan Section  */
-  .slogan-seciton {
+  /* offer Section  */
+  /* .offer-section {
     @apply py-16;
   }
 
-  .slogan-seciton .text-box {
+  .offer-section .text-box {
     @apply text-center px-5 lg:px-20 pb-24;
   }
 
-  .slogan-seciton .decoration-left {
+  .offer-section .decoration-left {
     @apply absolute -top-9 -left-7 -z-10;
   }
 
-  .slogan-seciton .decoration-right {
+  .offer-section .decoration-right {
     @apply absolute -bottom-7 -right-5 -z-10;
   }
 
-  .slogan-seciton .slogan {
+  .offer-section .slogan {
     @apply text-t-black-2 text-xl lg:text-3xl font-bold font-Jakarta leading-8 tracking-wide;
   }
 
-  .slogan-seciton .content-box {
+  .offer-section .content-box {
     @apply flex flex-col lg:flex-row gap-10 items-center;
   }
 
-  .slogan-seciton .image {
+  .offer-section .image {
     @apply w-full lg:w-2/5;
   }
 
-  .slogan-seciton .image img {
+  .offer-section .image img {
     @apply w-full h-auto object-cover;
   }
 
-  .slogan-seciton .content {
+  .offer-section .content {
     @apply w-full lg:w-3/5 gap-10 p-5;
   }
 
-  .slogan-seciton .title {
-    @apply text-2xl sm:text-4xl lg:text-5xl font-black font-Jakarta text-t-black-2 mb-10;
+  .offer-section .subtitle {
+    @apply text-xl text-t-primary mb-3;
+  }
+  .offer-section .title {
+    @apply text-2xl sm:text-4xl lg:text-5xl font-black font-Jakarta text-t-black-2 mb-8;
   }
 
-  .slogan-seciton .text {
-    @apply text-lg my-5 text-t-black/50 pl-8 relative;
+  .offer-section .text {
+    @apply text-lg my-3 text-t-black/50 pl-8 relative;
   }
 
-  .slogan-seciton .icon {
+  .offer-section .icon {
     @apply text-t-primary absolute top-2 left-0;
+  } */
+
+  .offer-section {
+    @apply relative bg-bg-white py-20;
+  }
+  .offer-section .text-box {
+    @apply text-center px-6 lg:px-24 mb-16;
+  }
+  .offer-section .decoration-left {
+    @apply absolute -top-10 -left-10 hidden lg:block;
+  }
+  .offer-section .slogan {
+    @apply relative z-10 text-xl text-center bg-white/80 p-5 rounded-lg shadow-lg;
+  }
+  .offer-section .decoration-right {
+    @apply absolute -bottom-10 -right-10 hidden lg:block;
+  }
+  .offer-section .content-box {
+    @apply flex flex-col lg:flex-row items-center gap-12 px-6;
+  }
+  .offer-section .subtitle {
+    @apply text-indigo-600 font-medium text-lg mb-2;
+  }
+  .offer-section .title {
+    @apply text-3xl lg:text-4xl font-extrabold text-gray-800 mb-6;
+  }
+  .offer-section .text {
+    @apply flex items-center mb-4 last:mb-0;
+  }
+  .offer-section .text .icon {
+    @apply text-indigo-500 mr-3;
   }
 
   /* Story Section  */
-
   .story-section {
-    @apply py-16;
+    @apply py-20 relative bg-t-primary/5 xl:mx-10 xl:my-5 xl:rounded-3xl overflow-hidden;
   }
 
   .story-section .title {
@@ -603,39 +636,50 @@
   }
 
   .story-section .title h4 {
-    @apply text-lg font-medium text-t-primary uppercase mb-10;
+    @apply text-base font-bold text-indigo-600 uppercase mb-3 tracking-wide;
   }
 
   .story-section .title h2 {
-    @apply text-3xl sm:text-5xl lg:text-6xl font-Jakarta font-bold text-t-black-2 w-full max-w-3xl mx-auto;
+    @apply text-3xl sm:text-5xl font-extrabold text-gray-900 max-w-4xl mx-auto;
   }
 
-  .story-section .flex-container {
-    @apply flex flex-col lg:flex-row items-center gap-10;
-  }
-
-  .story-section .image {
-    @apply w-full lg:w-1/2;
-  }
-
-  .story-section .image img {
-    @apply rounded-3xl w-full h-auto object-cover;
+  .story-section .main-content {
+    @apply flex flex-col lg:flex-row items-center gap-16 relative z-10;
   }
 
   .story-section .content {
-    @apply w-full lg:w-1/2;
+    @apply w-full lg:w-1/2 text-left;
   }
 
   .story-section .content p {
-    @apply text-lg text-t-black-2 mb-6;
-  }
-
-  .story-section .content p:last-child {
-    @apply mb-0;
+    @apply text-lg leading-relaxed text-t-black-2/90;
   }
 
   .story-section .content strong {
-    @apply text-t-primary;
+    @apply text-t-primary font-semibold;
+  }
+  .story-section .content .highlight {
+    @apply text-xl mt-4 font-semibold text-t-primary/70;
+  }
+
+  .story-section .image {
+    @apply w-full lg:w-1/2 flex justify-center relative z-10;
+  }
+
+  .story-section .image-wrapper {
+    @apply relative w-64 h-64 lg:w-80 lg:h-80;
+  }
+
+  .story-section .image img {
+    @apply w-full h-full rounded-full shadow-xl object-cover;
+  }
+
+  .story-section .image .badge {
+    @apply absolute top-6 left-6 bg-t-primary text-t-white text-xs px-3 py-1 rounded-full;
+  }
+
+  .story-section .background-overlay {
+    @apply absolute inset-0 z-0;
   }
 
   /* Member Section */
@@ -672,7 +716,7 @@
   }
 
   .member-section .member .name {
-    @apply mt-6 text-xl font-bold;
+    @apply mt-6 text-xl font-bold text-t-white;
   }
 
   .member-section .member .position {
@@ -701,7 +745,7 @@
   }
 
   .faq-section .faq-item {
-    @apply bg-t-primary/20 rounded-2xl px-5 transition-all duration-300;
+    @apply bg-t-primary/10 rounded-2xl px-5 transition-all duration-300;
   }
 
   .faq-section .faq-question {
@@ -717,7 +761,7 @@
   }
 
   .faq-section .faq-answer {
-    @apply overflow-hidden max-h-0 py-0 transition-all duration-300 text-t-black/50;
+    @apply overflow-hidden max-h-0 py-0 transition-all duration-300 text-t-black/70;
   }
 
   /* ======================== End Of About Page ======================== */
